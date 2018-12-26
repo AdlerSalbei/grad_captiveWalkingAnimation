@@ -22,4 +22,4 @@ private _statement = {
     [_player, _target, _vehicle] call FUNC(doLoadCaptive);
 };
 
-[_target call EFUNC(common,nearestVehiclesFreeSeat), _statement, _target] call EFUNC(interact_menu,createVehiclesActions)
+[_target call ace_common_fnc_nearestVehiclesFreeSeat, _statement, _target] call ace_interact_menu_fnc_createVehiclesActions;

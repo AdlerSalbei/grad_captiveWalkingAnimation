@@ -20,8 +20,8 @@
 params ["_vehicle", "", "_unit"];
 TRACE_2("params",_vehicle,_unit);
 
-if ((local _unit) && {_unit getVariable [QGVAR(isHandcuffed), false]}) then {
-    private _cargoIndex = _unit getVariable [QGVAR(CargoIndex), -1];
+if ((local _unit) && {_unit getVariable ["ace_captives_isHandcuffed", false]}) then {
+    private _cargoIndex = _unit getVariable ["ace_captives_CargoIndex", -1];
 
     if (_cargoIndex != -1) then {
         //If captive was not "unloaded", then move them back into the vehicle.
@@ -29,7 +29,7 @@ if ((local _unit) && {_unit getVariable [QGVAR(isHandcuffed), false]}) then {
         _unit moveInCargo [_vehicle, _cargoIndex];
     } else {
         //Getting out of vehicle:
-        [_unit, "ACE_AmovPercMstpScapWnonDnon", 2] call EFUNC(common,doAnimation);
-        [_unit, "ACE_AmovPercMstpScapWnonDnon", 1] call EFUNC(common,doAnimation);
+        [_unit, "ACE_AmovPercMstpScapWnonDnon", 2] call ace_common_fnc_doAnimation;
+        [_unit, "ACE_AmovPercMstpScapWnonDnon", 1] call ace_common_fnc_doAnimation;
     };
 };

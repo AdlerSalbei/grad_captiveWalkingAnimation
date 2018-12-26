@@ -1,4 +1,4 @@
-#define PREFIX grad_enhancedDiving
+#define PREFIX grad_captivWalkingAnimation
 #define MAINPREFIX x
 
 #include "script_version.hpp"

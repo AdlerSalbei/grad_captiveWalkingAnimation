@@ -6,13 +6,12 @@ class CfgPatches {
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = { QMAINPATCH, "ace_trenches" };
-        authors[] = { "Salbei", "chris579" };
+        requiredAddons[] = { QMAINPATCH};
+        authors[] = { "Salbei"};
         VERSION_CONFIG;
     };
 };
 
-#include <Cfg3DEN.hpp>
 #include <CfgEventHandlers.hpp>
+#include <CfgMoves.hpp>
 #include <CfgVehicles.hpp>
-#include <CfgWorldsTextures.hpp>

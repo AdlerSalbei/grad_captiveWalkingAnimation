@@ -6,7 +6,7 @@ import subprocess
 
 ######## GLOBALS #########
 MAINPREFIX = "x"
-PREFIX = "grad_enhancedDiving_"
+PREFIX = "grad_captivWalkingAnimation_"
 ##########################
 
 def mod_time(path):

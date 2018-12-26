@@ -30,12 +30,7 @@ class CfgVehicles {
             class ACE_StopEscortingSelf {
                 statement = QUOTE([ARR_3(_player,objNull, false)] call FUNC(doEscortCaptive));
             };
-            class ACE_StartSurrenderingSelf {
-                statement = QUOTE([ARR_2(_player, true)] call FUNC(setSurrendered));
-            };
-            class ACE_StopSurrenderingSelf {
-                statement = QUOTE([ARR_2(_player, false)] call FUNC(setSurrendered));
-            };
+
         };
     };
 

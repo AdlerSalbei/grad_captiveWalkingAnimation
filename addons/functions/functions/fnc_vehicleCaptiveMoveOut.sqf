@@ -18,9 +18,9 @@
 params ["_unit"];
 TRACE_1("params",_unit);
 
-_unit setVariable [QGVAR(CargoIndex), -1, true];
+_unit setVariable ["ace_captives_CargoIndex", -1, true];
 
 moveOut _unit;
-[_unit, "ACE_AmovPercMstpScapWnonDnon", 2] call EFUNC(common,doAnimation);
-[_unit, "ACE_AmovPercMstpScapWnonDnon", 1] call EFUNC(common,doAnimation);
+[_unit, "ACE_AmovPercMstpScapWnonDnon", 2] call ace_common_fnc_doAnimation;
+[_unit, "ACE_AmovPercMstpScapWnonDnon", 1] call ace_common_fnc_doAnimation;
 unassignVehicle _unit;

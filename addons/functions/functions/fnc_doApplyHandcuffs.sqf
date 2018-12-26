@@ -19,7 +19,7 @@
 
 params ["_unit", "_target"];
 
-playSound3D [QUOTE(PATHTO_R(sounds\cable_tie_zipping.ogg)), objNull, false, (getPosASL _target), 1, 1, 10];
+playSound3D ["ace_captives\sounds\cable_tie_zipping.ogg", objNull, false, (getPosASL _target), 1, 1, 10];
 
 [QGVAR(setHandcuffed), [_target, true], [_target]] call CBA_fnc_targetEvent;
 

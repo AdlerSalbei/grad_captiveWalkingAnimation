@@ -22,13 +22,13 @@ if (!local _unit) exitWith {};
 
 if (_isUnconc) then {
     //Knocked out: If surrendering, stop
-    if (_unit getVariable [QGVAR(isSurrendering), false]) then {
+    if (_unit getVariable [ace_captives_fnc_isSurrendering, false]) then {
         [_unit, false] call FUNC(setSurrendered);
     };
 } else {
     //Woke up: if handcuffed, goto animation
-    if (_unit getVariable [QGVAR(isHandcuffed), false] && {vehicle _unit == _unit}) then {
-        [_unit] call EFUNC(common,fixLoweredRifleAnimation);
-        [_unit, "ACE_AmovPercMstpScapWnonDnon", 1] call EFUNC(common,doAnimation);
+    if (_unit getVariable ["ace_captives_isHandcuffed", false] && {vehicle _unit == _unit}) then {
+        [_unit] call ace_common_fnc_fixLoweredRifleAnimation;
+        [_unit, "ACE_AmovPercMstpScapWnonDnon", 1] call ace_common_fnc_doAnimation;
     };
 };

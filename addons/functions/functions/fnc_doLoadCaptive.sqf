@@ -19,19 +19,19 @@
 
 params ["_unit", "_target", "_vehicle"];
 
-if (isNull _target && {_unit getVariable [QGVAR(isEscorting), false]}) then {
+if (isNull _target && {_unit getVariable ["ace_captives_isEscorting", false]}) then {
     // Looking at a vehicle while escorting, get target from attached objects:
     {
-        if (_x getVariable [QGVAR(isHandcuffed), false]) exitWith {
+        if (_x getVariable ["ace_captives_isHandcuffed", false]) exitWith {
             _target = _x;
         };
     } forEach (attachedObjects _unit);
 };
-if (isNull _target || {(vehicle _target) != _target} || {!(_target getVariable [QGVAR(isHandcuffed), false])}) exitWith {WARNING("");};
+if (isNull _target || {(vehicle _target) != _target} || {!(_target getVariable ["ace_captives_isHandcuffed", false])}) exitWith {WARNING("");};
 
 if (isNull _vehicle) then {
     // Looking at a captive unit, get nearest vehicle with valid seat:
-    _vehicle = (_target call EFUNC(common,nearestVehiclesFreeSeat)) param [0, objNull];
+    _vehicle = (_target call ace_captives_fnc_nearestVehiclesFreeSeat) param [0, objNull];
 } else {
     // We have a vehicle picked, make sure it has empty seats:
     if (_vehicle emptyPositions "cargo" == 0 && {_vehicle emptyPositions "gunner" == 0}) then {
@@ -41,5 +41,5 @@ if (isNull _vehicle) then {
 
 if (isNull _vehicle) exitWith {WARNING("Could not find vehicle to load captive");};
 
-_unit setVariable [QGVAR(isEscorting), false, true];
+_unit setVariable ["ace_captives_isEscorting", false, true];
 [QGVAR(moveInCaptive), [_target, _vehicle], [_target]] call CBA_fnc_targetEvent;

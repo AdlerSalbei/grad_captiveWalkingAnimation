@@ -21,7 +21,7 @@ TRACE_2("AnimChanged",_unit,_newAnimation);
 if (_unit == (vehicle _unit)) then {
     if ((_newAnimation != "ACE_AmovPercMstpSsurWnonDnon") && {!(_unit getVariable ["ACE_isUnconscious", false])}) then {
         TRACE_1("Handcuff animation interrupted",_newAnimation);
-        [_unit, "ACE_AmovPercMstpScapWnonDnon", 1] call EFUNC(common,doAnimation);
+        [_unit, "ACE_AmovPercMstpScapWnonDnon", 1] call ace_common_fnc_doAnimation;
     };
 } else {
     private _turretPath = [];
@@ -33,6 +33,6 @@ if (_unit == (vehicle _unit)) then {
     if (_turretPath isEqualTo []) exitWith {};
 
     TRACE_1("Handcuff (FFV) animation interrupted",_newAnimation);
-    [_unit, "ACE_HandcuffedFFV", 2] call EFUNC(common,doAnimation);
-    [_unit, "ACE_HandcuffedFFV", 1] call EFUNC(common,doAnimation);
+    [_unit, "ACE_HandcuffedFFV", 2] call ace_common_fnc_doAnimation;
+    [_unit, "ACE_HandcuffedFFV", 1] call ace_common_fnc_doAnimation;
 };
