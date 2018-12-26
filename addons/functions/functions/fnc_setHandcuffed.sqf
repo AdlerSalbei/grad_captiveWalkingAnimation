@@ -25,7 +25,7 @@ if (!local _unit) exitWith {
 
 if !(missionNamespace getVariable [QGVAR(captivityEnabled), false]) exitWith {
    // It's to soon to call this function, delay it
-   if ("ace_common_settingsInitFinished") then {
+   if (ace_common_settingsInitFinished) then {
       // Settings are already initialized, but the small wait isn't over
       [DFUNC(setHandCuffed), _this, 0.05] call CBA_fnc_waitAndExecute;
    } else {
@@ -63,7 +63,7 @@ if (_state) then {
       [_unit, "AnimCableStandStart", 1] call ace_common_fnc_doAnimation;
       ACE_captivEH = _unit addEventHandler ["AnimDone", {
       params ["_unit", "_anim"];
-         if (_anim = "AnimCableStandStart") then {
+         if (_anim == "AnimCableStandStart") then {
         _unit removeEventHandler ["AnimDone", ACE_captivEH];
          };
       }];
