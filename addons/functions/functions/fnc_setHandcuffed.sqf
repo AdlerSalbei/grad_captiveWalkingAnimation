@@ -60,7 +60,38 @@ if (_state) then {
 
    if ((vehicle _unit) == _unit) then {
       [_unit] call ace_common_fnc_fixLoweredRifleAnimation;
-      [_unit, "AnimCableStandStart", 2] call ace_common_fnc_doAnimation;
+      [_unit, "blockThrow", "ace_captives_Handcuffed", true] call ace_common_fnc_statusEffect_set;
+      [_unit, "forceWalk", "ace_captives_Handcuffed", true] call ace_common_fnc_statusEffect_set;
+
+      if (isPlayer _unit) then {
+         _unit addEventHandler ["AnimDone",
+            {
+               params ["_unit", "_anim"];
+               systemChat _anim;
+            }];
+         if (currentWeapon _unit == "") then {
+            [_unit, "AnimCableStandLoop"] call ace_common_fnc_doGesture;
+            [{
+               [_this, "AnimCableStandLoop"] call ace_common_fnc_doGesture;
+            },_unit,1] call CBA_fnc_waitAndExecute;
+         } else {
+            _unit action ["SwitchWeapon", _unit, _unit, 100];
+            [_unit, "AmovPercMstpSrasWrflDnon_AmovPercMstpSnonWnonDnon", 1] call ace_common_fnc_doAnimation;
+            GVAR(EH) = _unit addEventHandler ["AnimDone",
+               {
+                  params ["_unit", "_anim"];
+                  if (_anim == "AmovPercMstpSrasWrflDnon_AmovPercMstpSnonWnonDnon") then {
+                     _unit removeEventHandler ["AnimDone", GVAR(EH)];
+                     [_unit, "AnimCableStandLoop"] call ace_common_fnc_doGesture;
+                     [{
+                        [_this, "AnimCableStandLoop"] call ace_common_fnc_doGesture;
+                     },_unit,1] call CBA_fnc_waitAndExecute;
+               };
+            }];
+         };
+      } else {
+         [_unit, "ACE_AmovPercMstpScapWnonDnon", 1] call ace_common_fnc_doAnimation;
+      };
    } else {
       [_unit, "ACE_HandcuffedFFV", 2] call ace_common_fnc_doAnimation;
       [_unit, "ACE_HandcuffedFFV", 1] call ace_common_fnc_doAnimation;
@@ -72,6 +103,8 @@ if (_state) then {
 } else {
    _unit setVariable ["ace_captives_isHandcuffed", false, true];
    [_unit, "setCaptive", "ace_captives_Handcuffed", false] call ace_common_fnc_statusEffect_set;
+   [_unit, "blockThrow", "ace_captives_Handcuffed", false] call ace_common_fnc_statusEffect_set;
+   [_unit, "forceWalk", "ace_captives_Handcuffed", false] call ace_common_fnc_statusEffect_set;
 
    if (((vehicle _unit) == _unit) && {!(_unit getVariable ["ACE_isUnconscious", false])}) then {
       //Break out of hands up animation loop
