@@ -6,7 +6,7 @@ class CfgPatches {
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = { QMAINPATCH};
+        requiredAddons[] = {"ace_captives"};
         authors[] = { "Salbei"};
         VERSION_CONFIG;
     };

@@ -7,7 +7,7 @@ class CfgPatches {
         url = "$STR_grad_URL";
         units[] = {};
         weapons[] = {};
-        requiredAddons[] = {"ace_captives"};
+        requiredAddons[] = {"ace_main"};
         VERSION_CONFIG;
         authors[] = {"Salbei"};
     };

@@ -47,7 +47,7 @@ if (_state) then {
    };
 
    //Set unit cargoIndex (will be -1 if dismounted)
-   _unit setVariable [ace_captives_fnc_CargoIndex, ((vehicle _unit) getCargoIndex _unit), true];
+   _unit setVariable ["ace_captives_fnc_CargoIndex", ((vehicle _unit) getCargoIndex _unit), true];
 
    if (_unit == ACE_player) then {
       ["captive", [false, false, false, false, false, false, false, false, false, true]] call ace_common_fnc_showHud;
@@ -60,38 +60,26 @@ if (_state) then {
 
    if ((vehicle _unit) == _unit) then {
       [_unit] call ace_common_fnc_fixLoweredRifleAnimation;
-      [_unit, "AnimCableStandStart", 1] call ace_common_fnc_doAnimation;
-      ACE_captivEH = _unit addEventHandler ["AnimDone", {
-      params ["_unit", "_anim"];
-         if (_anim == "AnimCableStandStart") then {
-        _unit removeEventHandler ["AnimDone", ACE_captivEH];
-         };
-      }];
+      [_unit, "AnimCableStandStart", 2] call ace_common_fnc_doAnimation;
    } else {
       [_unit, "ACE_HandcuffedFFV", 2] call ace_common_fnc_doAnimation;
       [_unit, "ACE_HandcuffedFFV", 1] call ace_common_fnc_doAnimation;
    };
 
-   _unit setVariable [ace_captives_fnc_handcuffAnimEHID, -1];
+   _unit setVariable ["ace_captives_fnc_handcuffAnimEHID", -1];
 
    }, [_unit], 0.01] call CBA_fnc_waitAndExecute;
 } else {
    _unit setVariable ["ace_captives_isHandcuffed", false, true];
    [_unit, "setCaptive", "ace_captives_Handcuffed", false] call ace_common_fnc_statusEffect_set;
 
-   //remove AnimChanged EH
-   private _animChangedEHID = _unit getVariable [ace_captives_fnc_handcuffAnimEHID, -1];
-   TRACE_1("removing animChanged EH",_animChangedEHID);
-   _unit removeEventHandler ["AnimChanged", _animChangedEHID];
-   _unit setVariable [ace_captives_fnc_handcuffAnimEHID, -1];
-
    if (((vehicle _unit) == _unit) && {!(_unit getVariable ["ACE_isUnconscious", false])}) then {
       //Break out of hands up animation loop
       [_unit, "ACE_AmovPercMstpScapWnonDnon_AmovPercMstpSnonWnonDnon", 2] call ace_common_fnc_doAnimation;
    };
 
-   if (_unit getVariable [ace_captives_fnc_CargoIndex, -1] != -1) then {
-      _unit setVariable [ace_captives_fnc_CargoIndex, -1, true];
+   if (_unit getVariable ["ace_captives_fnc_CargoIndex", -1] != -1) then {
+      _unit setVariable ["ace_captives_fnc_CargoIndex", -1, true];
    };
 
    if (_unit == ACE_player) then {
