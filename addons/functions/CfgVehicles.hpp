@@ -67,4 +67,14 @@ class CfgVehicles {
     class StaticWeapon: LandVehicle {
         MACRO_LOADCAPTIVE
     };
+
+    class Logic;
+  class Module_F: Logic {
+      class ArgumentsBaseUnits {};
+      class ModuleDescription {};
+  };
+
+  class GVAR(ModuleHandcuffed): Module_F {
+      function = QFUNC(moduleHandcuffed);
+  };
 };
