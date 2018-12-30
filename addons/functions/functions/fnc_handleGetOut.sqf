@@ -29,7 +29,6 @@ if ((local _unit) && {_unit getVariable ["ace_captives_isHandcuffed", false]}) t
         _unit moveInCargo [_vehicle, _cargoIndex];
     } else {
         //Getting out of vehicle:
-        [_unit, "ACE_AmovPercMstpScapWnonDnon", 2] call ace_common_fnc_doAnimation;
-        [_unit, "ACE_AmovPercMstpScapWnonDnon", 1] call ace_common_fnc_doAnimation;
+        [_unit] call FUNC(handleCaptivAnim);
     };
 };

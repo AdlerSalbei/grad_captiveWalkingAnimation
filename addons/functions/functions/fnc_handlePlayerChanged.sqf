@@ -19,7 +19,7 @@
 params ["_newUnit","_oldUnit"];
 
 //set showHUD based on new unit status:
-if ((_newUnit getVariable ["ace_captives_isHandcuffed", false]) || {_newUnit getVariable [ace_captives_fnc_isSurrendering, false]}) then {
+if ((_newUnit getVariable ["ace_captives_isHandcuffed", false]) || {_newUnit getVariable ["ace_captives_fnc_isSurrendering", false]}) then {
     TRACE_1("Player Change (showHUD false)",_newUnit);
     ["captive", [false, false, false, false, false, false, false, false, false, true]] call ace_common_fnc_showHud;
 } else {

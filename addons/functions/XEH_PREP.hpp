@@ -1,9 +1,11 @@
-PREP(addLoadCaptiveActions);
+PREP(animChangeEh);
 PREP(doApplyHandcuffs);
 PREP(doEscortCaptive);
 PREP(doRemoveHandcuffs);
 PREP(doUnloadCaptive);
+PREP(handcuffedWalkAnim);
 PREP(handleAnimChangedHandcuffed);
+PREP(handleCaptivAnim);
 PREP(handleGetOut);
 PREP(handleKilled);
 PREP(handleLocal);
@@ -13,5 +15,4 @@ PREP(handleRespawn);
 PREP(handleUnitInitPost);
 PREP(moduleHandcuffed);
 PREP(setHandcuffed);
-PREP(vehicleCaptiveMoveIn);
 PREP(vehicleCaptiveMoveOut);

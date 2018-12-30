@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: Nic547, commy2
+ * Author: Nic547, commy2, Salbei
  * Handcuffs a unit.
  *
  * Arguments:
@@ -18,6 +18,8 @@
 
 params ["_unit","_state"];
 TRACE_2("params",_unit,_state);
+
+systemChat "Handcuffing";
 
 if (!local _unit) exitWith {
    WARNING("running setHandcuffed on remote unit");
@@ -55,56 +57,31 @@ if (_state) then {
 
    // fix anim on mission start (should work on dedicated servers)
    [{
-   params ["_unit"];
-   if (!(_unit getVariable ["ace_captives_isHandcuffed", false])) exitWith {};
+      params ["_unit"];
+      if (!(_unit getVariable ["ace_captives_isHandcuffed", false])) exitWith {};
 
-   if ((vehicle _unit) == _unit) then {
-      [_unit] call ace_common_fnc_fixLoweredRifleAnimation;
-      [_unit, "blockThrow", "ace_captives_Handcuffed", true] call ace_common_fnc_statusEffect_set;
-      [_unit, "forceWalk", "ace_captives_Handcuffed", true] call ace_common_fnc_statusEffect_set;
+      if ((vehicle _unit) == _unit) then {
+         [_unit] call ace_common_fnc_fixLoweredRifleAnimation;
+         [_unit, "blockThrow", "ace_captives_Handcuffed", true] call ace_common_fnc_statusEffect_set;
+         [_unit, "forceWalk", "ace_captives_Handcuffed", true] call ace_common_fnc_statusEffect_set;
 
-      if (isPlayer _unit) then {
-         _unit addEventHandler ["AnimDone",
-            {
-               params ["_unit", "_anim"];
-               systemChat _anim;
-            }];
-         if (currentWeapon _unit == "") then {
-            [_unit, "AnimCableStandLoop"] call ace_common_fnc_doGesture;
-            [{
-               [_this, "AnimCableStandLoop"] call ace_common_fnc_doGesture;
-            },_unit,1] call CBA_fnc_waitAndExecute;
-         } else {
-            _unit action ["SwitchWeapon", _unit, _unit, 100];
-            [_unit, "AmovPercMstpSrasWrflDnon_AmovPercMstpSnonWnonDnon", 1] call ace_common_fnc_doAnimation;
-            GVAR(EH) = _unit addEventHandler ["AnimDone",
-               {
-                  params ["_unit", "_anim"];
-                  if (_anim == "AmovPercMstpSrasWrflDnon_AmovPercMstpSnonWnonDnon") then {
-                     _unit removeEventHandler ["AnimDone", GVAR(EH)];
-                     [_unit, "AnimCableStandLoop"] call ace_common_fnc_doGesture;
-                     [{
-                        [_this, "AnimCableStandLoop"] call ace_common_fnc_doGesture;
-                     },_unit,1] call CBA_fnc_waitAndExecute;
-               };
-            }];
-         };
+         [_unit] call FUNC(handleCaptivAnim);
+
       } else {
-         [_unit, "ACE_AmovPercMstpScapWnonDnon", 1] call ace_common_fnc_doAnimation;
+         [_unit, "ACE_HandcuffedFFV", 2] call ace_common_fnc_doAnimation;
+         [_unit, "ACE_HandcuffedFFV", 1] call ace_common_fnc_doAnimation;
       };
-   } else {
-      [_unit, "ACE_HandcuffedFFV", 2] call ace_common_fnc_doAnimation;
-      [_unit, "ACE_HandcuffedFFV", 1] call ace_common_fnc_doAnimation;
-   };
-
-   _unit setVariable ["ace_captives_fnc_handcuffAnimEHID", -1];
-
    }, [_unit], 0.01] call CBA_fnc_waitAndExecute;
 } else {
    _unit setVariable ["ace_captives_isHandcuffed", false, true];
    [_unit, "setCaptive", "ace_captives_Handcuffed", false] call ace_common_fnc_statusEffect_set;
    [_unit, "blockThrow", "ace_captives_Handcuffed", false] call ace_common_fnc_statusEffect_set;
    [_unit, "forceWalk", "ace_captives_Handcuffed", false] call ace_common_fnc_statusEffect_set;
+   private _pfID = _unit getVariable [QGVAR(PFH), -1];
+   if (_pfID != -1) then {
+      _unit setVariable [QGVAR(PFH), -1];
+      [_pfID] call CBA_fnc_removePerFrameHandler;
+   };
 
    if (((vehicle _unit) == _unit) && {!(_unit getVariable ["ACE_isUnconscious", false])}) then {
       //Break out of hands up animation loop

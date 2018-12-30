@@ -29,6 +29,6 @@ if (_isUnconc) then {
     //Woke up: if handcuffed, goto animation
     if (_unit getVariable ["ace_captives_isHandcuffed", false] && {vehicle _unit == _unit}) then {
         [_unit] call ace_common_fnc_fixLoweredRifleAnimation;
-        [_unit, "ACE_AmovPercMstpScapWnonDnon", 1] call ace_common_fnc_doAnimation;
+        [_unit] call  FUNC(handleCaptivAnim);
     };
 };

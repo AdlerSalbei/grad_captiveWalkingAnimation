@@ -12,7 +12,6 @@
 //This is normaly handled by the PFEH in doEscortCaptive, but that won't be running if they DC
 
 ["unit", FUNC(handlePlayerChanged)] call CBA_fnc_addPlayerEventHandler;
-[QGVAR(moveInCaptive), FUNC(vehicleCaptiveMoveIn)] call CBA_fnc_addEventHandler;
 [QGVAR(moveOutCaptive), FUNC(vehicleCaptiveMoveOut)] call CBA_fnc_addEventHandler;
 
 [QGVAR(setHandcuffed), FUNC(setHandcuffed)] call CBA_fnc_addEventHandler;
@@ -22,7 +21,7 @@
 
 if (!hasInterface) exitWith {};
 
-["ACE3 Common", "ace_captives_captives", [(localize LSTRING(SetCaptive)), (localize LSTRING(KeyComb_description))],
+["ACE3 Common", "ace_captives_captives", [(localize "STR_ace_captives_SetCaptive"), (localize "STR_ace_captives_KeyComb_description")],
 {
     private _target = cursorObject;
     if !([ACE_player, _target, []] call ace_common_fnc_canInteractWith) exitWith {false};

@@ -16,10 +16,6 @@ class CfgVehicles {
                 class ACE_StopEscorting {
                     statement = QUOTE([ARR_3(_player,_target, false)] call FUNC(doEscortCaptive));
                 };
-                class ACE_LoadCaptive {
-                    statement = QUOTE([ARR_3(_player, _target, objNull)] call FUNC(doLoadCaptive));
-                    insertChildren = QUOTE(call DFUNC(addLoadCaptiveActions));
-                };
                 class ace_captives_UnloadCaptive {
                     statement = QUOTE([ARR_2(_player, _target)] call FUNC(doUnloadCaptive));
                 };
@@ -34,47 +30,13 @@ class CfgVehicles {
         };
     };
 
-#define MACRO_LOADCAPTIVE \
-        class ACE_Actions { \
-            class ACE_MainActions { \
-                class ace_captives_LoadCaptive { \
-                    statement = QUOTE([ARR_3(_player, objNull, _target)] call FUNC(doLoadCaptive)); \
-                }; \
-            }; \
-        };
-
-    class LandVehicle;
-    class Car: LandVehicle {
-        MACRO_LOADCAPTIVE
-    };
-    class Tank: LandVehicle {
-        MACRO_LOADCAPTIVE
-    };
-
-    class Air;
-    class Helicopter: Air {
-        MACRO_LOADCAPTIVE
-    };
-    class Plane: Air {
-        MACRO_LOADCAPTIVE
-    };
-
-    class Ship;
-    class Ship_F: Ship {
-        MACRO_LOADCAPTIVE
-    };
-
-    class StaticWeapon: LandVehicle {
-        MACRO_LOADCAPTIVE
-    };
-
     class Logic;
-  class Module_F: Logic {
-      class ArgumentsBaseUnits {};
-      class ModuleDescription {};
-  };
+    class Module_F: Logic {
+        class ArgumentsBaseUnits {};
+        class ModuleDescription {};
+    };
 
-  class GVAR(ModuleHandcuffed): Module_F {
-      function = QFUNC(moduleHandcuffed);
-  };
+    class ace_captives_ModuleHandcuffed: Module_F {
+        function = QFUNC(moduleHandcuffed);
+    };
 };
