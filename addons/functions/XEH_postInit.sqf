@@ -12,6 +12,7 @@
 //This is normaly handled by the PFEH in doEscortCaptive, but that won't be running if they DC
 
 ["unit", FUNC(handlePlayerChanged)] call CBA_fnc_addPlayerEventHandler;
+[QGVAR(moveInCaptive), FUNC(vehicleCaptiveMoveIn)] call CBA_fnc_addEventHandler;
 [QGVAR(moveOutCaptive), FUNC(vehicleCaptiveMoveOut)] call CBA_fnc_addEventHandler;
 
 [QGVAR(setHandcuffed), FUNC(setHandcuffed)] call CBA_fnc_addEventHandler;

@@ -29,6 +29,11 @@ if (_state) then {
 
     _unit setVariable ["ace_captives_escortedUnit", _target, true];
 
+    if (isPlayer _unit) then {
+      _unit setVariable [QGVAR(animation), "ACE_AmovPercMstpScapWnonDnon"];
+      [_unit, "ACE_AmovPercMstpScapWnonDnon", 1] call ace_common_fnc_doAnimation;
+   };
+
     //Add Actionmenu to release captive
     private _actionID = _unit addAction [format ["<t color='#FF0000'>%1</t>", localize LSTRING(StopEscorting)],
     {[(_this select 0), ((_this select 0) getVariable ["ace_captives_escortedUnit", objNull]), false] call FUNC(doEscortCaptive);},
@@ -56,4 +61,10 @@ if (_state) then {
 } else {
     _unit setVariable ["ace_captives_isEscorting", false, true];
     _unit setVariable ["ace_captives_escortedUnit", objNull, true];
+
+    if (isPlayer _unit) then {
+      _unit setVariable [QGVAR(animation), "AnimCableStandLoop"];
+      [_unit, "amovpercmstpsnonwnondnon", 1] call ace_common_fnc_doAnimation;
+      [_unit, "AnimCableStandLoop"] call ace_common_fnc_doGesture;
+   };
 };

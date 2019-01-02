@@ -17,18 +17,7 @@
 
 params ["_unit"];
 
-diag_log format ["Activ: %1, isPlayer: %2, isEscorting: %3", GVAR(allowWalkingWhileCaptiv), isPlayer _unit, !(_unit getVariable ["ace_captives_isEscorting", false])];
-
 if (GVAR(allowWalkingWhileCaptiv) && {isPlayer _unit} && {!(_unit getVariable ["ace_captives_isEscorting", false])}) then {
-
-   //remove before release!
-   _unit addEventHandler ["AnimChanged",
-   {
-      params ["_unit", "_anim"];
-      systemChat _anim;
-      diag_log _anim;
-   }];
-
    if (currentWeapon _unit == "") then {
       [_unit] call FUNC(handcuffedWalkAnim);
    } else {
@@ -37,7 +26,7 @@ if (GVAR(allowWalkingWhileCaptiv) && {isPlayer _unit} && {!(_unit getVariable ["
 
       _handle = [{
          params ["_unit", "_handle"];
-         if (!(alive _unit) || {!(_unit getVariable ["ace_captives_isHandcuffed", false])}) exitWith {
+         if (!(alive _unit) || {!(_unit getVariable ["ace_captives_isHandcuffed", false])} || {vehicle _unit != _unit}) exitWith {
             [_handle] call CBA_fnc_removePerFrameHandler;
             _unit setVariable [QGVAR(PFH), -1];
          };
@@ -49,7 +38,8 @@ if (GVAR(allowWalkingWhileCaptiv) && {isPlayer _unit} && {!(_unit getVariable ["
                [_this, "AnimCableStandLoop"] call ace_common_fnc_doGesture;
             },_unit,1] call CBA_fnc_waitAndExecute;
          };
-         },0,_unit] call CBA_fnc_addPerFrameHandler;
+      },0,_unit] call CBA_fnc_addPerFrameHandler;
+
       _unit setVariable [QGVAR(PFH), _handle];
 
       GVAR(EH) = _unit addEventHandler ["AnimDone",
