@@ -26,7 +26,7 @@ if (local _unit) then {
     };
 
     if (_unit getVariable ["ace_captives_isSurrendering", false]) then {
-        [_unit, false] call "ace_captives_fnc_setSurrendered";
+        [_unit, false] call ace_captives_fnc_setSurrendered;
     };
 
     if (_unit getVariable ["ace_captives_isHandcuffed", false]) then {
@@ -45,8 +45,8 @@ if (local _unit) then {
         } forEach (fullCrew (vehicle _unit));
         if (!(_turretPath isEqualTo [])) then {
             TRACE_1("Setting FFV Handcuffed Animation",_turretPath);
-            [_unit, "ACE_HandcuffedFFV", 2] call "ace_common_fnc_doAnimation";
-            [_unit, "ACE_HandcuffedFFV", 1] call "ace_common_fnc_doAnimation";
+            [_unit, "ACE_HandcuffedFFV", 2] call ace_common_fnc_doAnimation;
+            [_unit, "ACE_HandcuffedFFV", 1] call ace_common_fnc_doAnimation;
         };
     };
 };
