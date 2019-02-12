@@ -20,18 +20,18 @@
 params ["_unit", "_target", "_vehicle"];
 
 if (isNull _target && {_unit getVariable ["ace_captives_isEscorting", false]}) then {
-    // Looking at a vehicle while escorting, get target from attached objects:
+    // Looking at a vehicle while escorting, get target from attached objects
     {
         if (_x getVariable ["ace_captives_isHandcuffed", false]) exitWith {
             _target = _x;
         };
     } forEach (attachedObjects _unit);
 };
-if (isNull _target || {(vehicle _target) != _target} || {!(_target getVariable ["ace_captives_isHandcuffed", false])}) exitWith {WARNING("");};
+if (isNull _target || {(vehicle _target) != _target} || {!(_target getVariable ["ace_captives_isHandcuffed", false])}) exitWith {};
 
 if (isNull _vehicle) then {
     // Looking at a captive unit, get nearest vehicle with valid seat:
-    _vehicle = (_target call ace_common_fnc_nearestVehiclesFreeSeat)) param [0, objNull];
+    _vehicle = (_target call ace_common_fnc_nearestVehiclesFreeSeat) param [0, objNull];
 } else {
     // We have a vehicle picked, make sure it has empty seats:
     if (_vehicle emptyPositions "cargo" == 0 && {_vehicle emptyPositions "gunner" == 0}) then {
