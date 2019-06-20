@@ -49,6 +49,7 @@ if (_local) then {
         TRACE_1("Removing animChanged EH",_animChangedEHID);
         _unit removeEventHandler ["AnimChanged", _animChangedEHID];
         _unit setVariable ["ace_captives_handcuffAnimEHID", -1];
+        [_unit, "AnimCableStandEnd"] call ace_common_fnc_doGesture;
     };
 
     _animChangedEHID = _unit getVariable ["ace_captives_fnc_surrenderAnimEHID", -1];
