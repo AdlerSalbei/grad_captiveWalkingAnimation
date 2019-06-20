@@ -77,10 +77,12 @@ if (_state) then {
    [_unit, "setCaptive", "ace_captives_Handcuffed", false] call ace_common_fnc_statusEffect_set;
    [_unit, "blockThrow", "ace_captives_Handcuffed", false] call ace_common_fnc_statusEffect_set;
    [_unit, "forceWalk", "ace_captives_Handcuffed", false] call ace_common_fnc_statusEffect_set;
+   
    private _pfID = _unit getVariable [QGVAR(PFH), -1];
    if (_pfID != -1) then {
       _unit setVariable [QGVAR(PFH), -1];
       [_pfID] call CBA_fnc_removePerFrameHandler;
+      [_unit, "AnimCableStandEnd"] call ace_common_fnc_doGesture;
    };
 
    if (((vehicle _unit) == _unit) && {!(_unit getVariable ["ACE_isUnconscious", false])}) then {
