@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="GRAD">
     <Package name="CaptiveWalkingAnimation">
-        <Key ID="STR_grad_captivWalkingAnimation_functions_settingAllowWalkingWhileCaptiv_displayName">
+        <Key ID="STR_grad_captiveWalkingAnimation_functions_settingAllowWalkingWhileCaptiv_displayName">
             <English>Allow Captives walking</English>
             <German>Gefangenen laufen erlauben</German>
         </Key>
-        <Key ID="STR_grad_captivWalkingAnimation_functions_settingAllowWalkingWhileCaptiv_tooltip">
+        <Key ID="STR_grad_captiveWalkingAnimation_functions_settingAllowWalkingWhileCaptiv_tooltip">
             <English>Allow Captives walking</English>
             <German>Gefangenen laufen erlauben</German>
         </Key>
-        <Key ID="STR_grad_captivWalkingAnimation_functions_settingCategory">
+        <Key ID="STR_grad_captiveWalkingAnimation_functions_settingCategory">
             <English>GRAD CaptiveWalkingAnimation</English>
             <German>GRAD CaptiveWalkingAnimation</German>
         </Key>

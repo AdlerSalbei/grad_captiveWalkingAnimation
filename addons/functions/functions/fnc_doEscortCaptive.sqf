@@ -19,6 +19,8 @@
 
 params ["_unit", "_target","_state"];
 
+diag_log format ["Unit: %1, Target: %2", _unit, _target];
+
 if (_state) then {
     if (_unit getVariable ["ace_captives_isEscorting", false]) exitWith {};
 
@@ -29,9 +31,9 @@ if (_state) then {
 
     _unit setVariable ["ace_captives_escortedUnit", _target, true];
 
-    if (isPlayer _unit) then {
-      _unit setVariable [QGVAR(animation), "ACE_AmovPercMstpScapWnonDnon"];
-      [_unit, "ACE_AmovPercMstpScapWnonDnon", 1] call ace_common_fnc_doAnimation;
+    if (isPlayer _target) then {
+      _target setVariable [QGVAR(animation), "ACE_AmovPercMstpScapWnonDnon"];
+      [_target, "ACE_AmovPercMstpScapWnonDnon", 1] call ace_common_fnc_doAnimation;
    };
 
     //Add Actionmenu to release captive

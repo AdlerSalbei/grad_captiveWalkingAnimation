@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 /*
  * Author: Salbei
- * Handle the captiv animation.
+ * Handle the captive animation.
  *
  * Arguments:
  * 0: The Unit <OBJECT>
@@ -10,7 +10,7 @@
  * None
  *
  * Example:
- * [bob] call grad_captivWalkingAnimation_fnc_handleCaptivAnim
+ * [bob] call grad_captiveWalkingAnimation_fnc_handleCaptivAnim
  *
  * Public: No
  */

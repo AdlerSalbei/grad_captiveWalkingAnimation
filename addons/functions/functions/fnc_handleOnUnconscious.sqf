@@ -22,7 +22,7 @@ if (!local _unit) exitWith {};
 
 if (_isUnconc) then {
     //Knocked out: If surrendering, stop
-    if (_unit getVariable [ace_captives_fnc_isSurrendering, false]) then {
+    if (_unit getVariable ["ace_captives_fnc_isSurrendering", false]) then {
         [_unit, false] call FUNC(setSurrendered);
     };
 } else {

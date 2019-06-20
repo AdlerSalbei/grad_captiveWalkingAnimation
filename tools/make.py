@@ -57,7 +57,7 @@ if sys.platform == "win32":
     import winreg
 
 ######## GLOBALS #########
-project = "@grad_captivWalkingAnimation"
+project = "@grad_captiveWalkingAnimation"
 project_version = "3.0.0"
 arma3tools_path = ""
 work_drive = ""
@@ -66,11 +66,11 @@ make_root = ""
 release_dir = ""
 module_root_parent = ""
 optionals_root = ""
-key_name = "grad_captivWalkingAnimation"
+key_name = "grad_captiveWalkingAnimation"
 key = ""
 dssignfile = ""
-prefix = "grad_captivWalkingAnimation"
-pbo_name_prefix = "grad_captivWalkingAnimation_"
+prefix = "grad_captiveWalkingAnimation"
+pbo_name_prefix = "grad_captiveWalkingAnimation_"
 signature_blacklist = []
 importantFiles = ["mod.cpp", "logo_grad_ca.paa"]
 versionFiles = []

@@ -6,12 +6,12 @@
             <German>Gruppe Adler</German>
         </Key>
         <Key ID="STR_grad_URL">
-            <English>https://github.com/gruppe-adler/grad_captivWalkingAnimation</English>
-            <German>https://github.com/gruppe-adler/grad_captivWalkingAnimation</German>
+            <English>https://github.com/gruppe-adler/grad_captiveWalkingAnimation</English>
+            <German>https://github.com/gruppe-adler/grad_captiveWalkingAnimation</German>
         </Key>
         <Key ID="STR_grad_Main_Component">
-            <English>Gruppe Adler Captiv Walking Animation - Main Component</English>
-            <German>Gruppe Adler Captiv Walking Animation - Main Component</German>
+            <English>Gruppe Adler Captive Walking Animation - Main Component</English>
+            <German>Gruppe Adler Captive Walking Animation - Main Component</German>
         </Key>
     </Package>
 </Project>

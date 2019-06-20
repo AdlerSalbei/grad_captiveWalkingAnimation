@@ -1,13 +1,13 @@
-name = "GRAD Enhanced Diving";
+name = "GRAD Captive Walking";
 author = "Gruppe Adler";
 picture = "Adler.paa";
 actionName = "Website";
-action = "https://github.com/gruppe-adler/grad_captivWalkingAnimation";
+action = "https://github.com/gruppe-adler/grad_captiveWalkingAnimation";
 description = "Gruppe Adler Enhanced Diving";
 logo = "logo_grad_ca.paa";
 logoOver = "logo_grad_ca.paa";
-tooltip = "Gruppe Adler Enhanced Diving";
-overview = "GRAD Enhanced Diving contains an assortment of assets and functions to enhance armas underwater experience.";
+tooltip = "Gruppe Adler Captive Walking";
+overview = "GRAD Captive Walking adds walking animations to the ace captive state.";
 overviewPicture = "logo_grad_ca.paa";
 overviewText = "";
 overviewFootnote = "";
