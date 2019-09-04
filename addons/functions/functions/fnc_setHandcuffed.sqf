@@ -16,7 +16,7 @@
  * Public: No
  */
 
-params ["_unit","_state"];
+params ["_unit", "_state"];
 TRACE_2("params",_unit,_state);
 
 systemChat "Handcuffing";
@@ -83,6 +83,12 @@ if (_state) then {
       _unit setVariable [QGVAR(PFH), -1];
       [_pfID] call CBA_fnc_removePerFrameHandler;
       [_unit, "AnimCableStandEnd"] call ace_common_fnc_doGesture;
+
+      _pfID = _unit getVariable ["ace_captives_handcuffAnimEHID", -1];
+      if (_pfID != -1) then {
+         _unit setVariable ["ace_captives_handcuffAnimEHID", -1];
+         _unit removeEventHandler ["AnimChanged", _pfID];
+      };
    };
 
    if (((vehicle _unit) == _unit) && {!(_unit getVariable ["ACE_isUnconscious", false])}) then {

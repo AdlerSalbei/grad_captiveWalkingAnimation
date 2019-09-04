@@ -17,12 +17,11 @@
  * Public: No
  */
 
-params ["_unit", "_target","_state"];
-
-diag_log format ["Unit: %1, Target: %2", _unit, _target];
+params ["_unit", "_target", "_state"];
 
 if (_state) then {
-    if (_unit getVariable ["ace_captives_isEscorting", false]) exitWith {};
+
+    if (_unit getVariable ["ace_captives_isEscorting", false] || {(isPlayer _target && GVAR(disableEscorting))}) exitWith {};
 
     [_unit, _target, false] call ace_common_fnc_claim;
     _unit setVariable ["ace_captives_isEscorting", true, true];
@@ -37,16 +36,31 @@ if (_state) then {
    };
 
     //Add Actionmenu to release captive
-    private _actionID = _unit addAction [format ["<t color='#FF0000'>%1</t>", localize LSTRING(StopEscorting)],
-    {[(_this select 0), ((_this select 0) getVariable ["ace_captives_escortedUnit", objNull]), false] call FUNC(doEscortCaptive);},
-    nil, 20, false, true, "", QUOTE(!isNull GETVAR(_target,"ace_captives_escortedUnit",objNull))];
+    private _actionID = _unit addAction [
+        format ["<t color='#FF0000'>%1</t>", localize LSTRING(StopEscorting)],
+        {[(_this select 0), ((_this select 0) getVariable ["ace_captives_escortedUnit", objNull]), false] call FUNC(doEscortCaptive);},
+        nil, 
+        20, 
+        false, 
+        true, 
+        "", 
+        QUOTE(!isNull GETVAR(_target,"ace_captives_escortedUnit",objNull))
+    ];
 
     [{
         params ["_args", "_pfID"];
         _args params ["_unit", "_target", "_actionID"];
 
         if (_unit getVariable ["ace_captives_isEscorting", false]) then {
-            if (!alive _target || {!alive _unit} || {!canStand _target} || {!canStand _unit} || {_target getVariable ["ACE_isUnconscious", false]} || {_unit getVariable ["ACE_isUnconscious", false]} || {!isNull (attachedTo _unit)}) then {
+            if (
+                !alive _target || 
+                {!alive _unit} || 
+                {!canStand _target} || 
+                {!canStand _unit} || 
+                {_target getVariable ["ACE_isUnconscious", false]} || 
+                {_unit getVariable ["ACE_isUnconscious", false]} || 
+                {!isNull (attachedTo _unit)}
+            ) then {
                 _unit setVariable ["ace_captives_isEscorting", false, true];
             };
         };

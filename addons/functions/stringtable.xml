@@ -13,5 +13,13 @@
             <English>GRAD CaptiveWalkingAnimation</English>
             <German>GRAD CaptiveWalkingAnimation</German>
         </Key>
+        <Key ID="STR_grad_captiveWalkingAnimation_functions_settingDisableEscorting_displayName">
+            <English>Disable player escorting</English>
+            <German>Spieler Escortieren deaktivierenn</German>
+        </Key>
+        <Key ID="STR_grad_captiveWalkingAnimation_functions_settingDisableEscorting_tooltip">
+            <English>Disable the escorting for Players</English>
+            <German>Deaktiviert das eskortieren von Spielern</German>
+        </Key>
     </Package>
 </Project>

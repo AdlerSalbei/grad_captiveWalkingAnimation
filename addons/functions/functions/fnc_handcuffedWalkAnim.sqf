@@ -22,4 +22,4 @@ params ["_unit"];
    [_this, "AnimCableStandLoop"] call ace_common_fnc_doGesture;
    _this setVariable [QGVAR(animation), "AnimCableStandLoop"];
    [_this] call FUNC(animChangeEh);
-},_unit,1] call CBA_fnc_waitAndExecute;
+}, _unit, 1] call CBA_fnc_waitAndExecute;
