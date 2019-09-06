@@ -1,6 +1,6 @@
 {
-    "name": "grad_trenches",
-    "prefix": "grad_trenches",
+    "name": "grad_captiveWalkingAnimation",
+    "prefix": "grad_captiveWalkingAnimation",
     "author": "Salbei",
     "files": [
         "mod.cpp",
