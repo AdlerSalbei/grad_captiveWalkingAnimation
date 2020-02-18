@@ -19,6 +19,7 @@ params ["_target"];
 
 private _statement = {
     params ["_target", "_player", "_vehicle"];
+    
     [_player, _target, _vehicle] call FUNC(doLoadCaptive);
 };
 

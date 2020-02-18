@@ -21,5 +21,17 @@
             <English>Disable the escorting for Players</English>
             <German>Deaktiviert das eskortieren von Spielern</German>
         </Key>
+        <Key ID="STR_grad_captiveWalkingAnimation_functions_allowFreeing_displayName">
+            <English>Allow freeing</English>
+            <German>Entfesseln erlauben</German>
+        </Key>
+        <Key ID="STR_grad_captiveWalkingAnimation_functions_allowFreeing_tooltip">
+            <English>Allows the player to remove his cuffs on a Tree or Rock</English>
+            <German>Erlaubt es das ein Spieler seine Fesseln an einem Baum oder Felsen entfernt</German>
+        </Key>
+        <Key ID="STR_grad_captiveWalkingAnimation_functions_freeingTime">
+            <English>Freeing time</English>
+            <German>Befreiungs Zeit</German>
+        </Key>
     </Package>
 </Project>

@@ -14,6 +14,7 @@
 ["unit", FUNC(handlePlayerChanged)] call CBA_fnc_addPlayerEventHandler;
 [QGVAR(moveInCaptive), FUNC(vehicleCaptiveMoveIn)] call CBA_fnc_addEventHandler;
 [QGVAR(moveOutCaptive), FUNC(vehicleCaptiveMoveOut)] call CBA_fnc_addEventHandler;
+["ace_interactMenuOpened", {_this call FUNC(interactEH)}] call CBA_fnc_addEventHandler;
 
 [QGVAR(setHandcuffed), FUNC(setHandcuffed)] call CBA_fnc_addEventHandler;
 

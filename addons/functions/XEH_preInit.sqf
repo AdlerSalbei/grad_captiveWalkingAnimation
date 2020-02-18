@@ -15,6 +15,7 @@ GVAR(captivityEnabled) = false;
         localize LSTRING(settingAllowWalkingWhileCaptiv_tooltip)
     ], 
     localize LSTRING(settingCategory), 
+    true,
     true
 ] call CBA_Settings_fnc_init;
 
@@ -26,7 +27,29 @@ GVAR(captivityEnabled) = false;
         localize LSTRING(settingDisableEscorting_tooltip)
     ], 
     localize LSTRING(settingCategory), 
-    false
+    false,
+    true
+] call CBA_Settings_fnc_init;
+
+[
+    QGVAR(allowFreeing), 
+    "CHECKBOX", 
+    [
+        localize LSTRING(allowFreeing_displayName), 
+        localize LSTRING(allowFreeing_tooltip)
+    ], 
+    localize LSTRING(settingCategory), 
+    true,
+    true
+] call CBA_Settings_fnc_init;
+
+[
+    QGVAR(freeingTime), 
+    "SLIDER", 
+    localize LSTRING(freeingTime), 
+    localize LSTRING(settingCategory), 
+    [5, 450, 35, 0], 
+    true
 ] call CBA_Settings_fnc_init;
 
 ADDON = true;
