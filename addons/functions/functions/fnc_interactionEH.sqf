@@ -49,7 +49,7 @@ systemChat "interactEH 1";
                 private _blacklistedObjects = [];
                 {
                     private _modelName = ((str _x) splitString " .") select 1;
-                    if (_modelName in _blacklist) then {_blacklistedObjects pushBackUnique _x;}
+                    if (_modelName in _blacklist) then {_blacklistedObjects pushBackUnique _x;};
                     if !((_x in _objHelped) && {_x in _blacklistedObjects}) then {
                         _objHelped pushBack _x;
                         private _helper = "ACE_LogicDummy" createVehicleLocal [0,0,0];
