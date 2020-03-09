@@ -6,6 +6,7 @@ PREP(doEscortCaptive);
 PREP(doLoadCaptive);
 PREP(doRemoveHandcuffs);
 PREP(doUnloadCaptive);
+PREP(enableInteraction);
 PREP(freeUnit);
 PREP(getObjectPos);
 PREP(handcuffedWalkAnim);

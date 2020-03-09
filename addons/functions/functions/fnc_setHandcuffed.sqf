@@ -11,15 +11,13 @@
  * None
  *
  * Example:
- * [bob, true] call ACE_captives_fnc_setHandcuffed;
+ * [bob, true] call grad_captiveWalkingAnimation_functions_fnc_setHandcuffed;
  *
  * Public: No
  */
 
 params ["_unit", "_state"];
 TRACE_2("params",_unit,_state);
-
-systemChat "Handcuffing";
 
 if (!local _unit) exitWith {
    WARNING("running setHandcuffed on remote unit");
@@ -67,6 +65,9 @@ if (_state) then {
 
          [_unit] call FUNC(handleCaptivAnim);
 
+         if(GVAR(allowFreeing)) then {
+            [true] call FUNC(enableInteraction);
+         };
       } else {
          [_unit, "ACE_HandcuffedFFV", 2] call ace_common_fnc_doAnimation;
          [_unit, "ACE_HandcuffedFFV", 1] call ace_common_fnc_doAnimation;
@@ -83,6 +84,10 @@ if (_state) then {
       _unit setVariable [QGVAR(PFH), -1];
       [_pfID] call CBA_fnc_removePerFrameHandler;
       [_unit, "AnimCableStandEnd"] call ace_common_fnc_doGesture;
+
+      if(GVAR(allowFreeing)) then {
+         [false] call FUNC(enableInteraction);
+      };
 
       _pfID = _unit getVariable ["ace_captives_handcuffAnimEHID", -1];
       if (_pfID != -1) then {

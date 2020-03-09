@@ -19,3 +19,7 @@
 params ["_unit", "_target"];
 
 [QGVAR(moveOutCaptive), [_target], [_target]] call CBA_fnc_targetEvent;
+
+if(GVAR(allowFreeing)) then {
+    [true] call FUNC(enableInteraction);
+};

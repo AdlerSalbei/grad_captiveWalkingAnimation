@@ -43,3 +43,7 @@ if (isNull _vehicle) exitWith {WARNING("Could not find vehicle to load captive")
 
 _unit setVariable ["ace_captives_isEscorting", false, true];
 [QGVAR(moveInCaptive), [_target, _vehicle], [_target]] call CBA_fnc_targetEvent;
+
+if(GVAR(allowFreeing)) then {
+    [false] call FUNC(enableInteraction);
+};

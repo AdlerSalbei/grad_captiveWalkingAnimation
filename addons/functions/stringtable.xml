@@ -33,5 +33,9 @@
             <English>Freeing time</English>
             <German>Befreiungs Zeit</German>
         </Key>
+        <Key ID="STR_grad_captiveWalkingAnimation_functions_freeing">
+            <English>Freeing</English>
+            <German>Befreiung</German>
+        </Key>
     </Package>
 </Project>

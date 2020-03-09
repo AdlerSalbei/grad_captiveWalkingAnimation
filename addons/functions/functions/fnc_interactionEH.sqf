@@ -3,13 +3,16 @@
 /*
 *   Original function from ace_logistics_wirecutter by PabstMirror
 *   Adapted for grad_axe by McDiod
+*   Adapted for grad_captiveWalkingAnimation by Salbei
 */
 
 params ["_interactionType"];
 
+systemChat format ["%1, %2, %3, %4", !(GVAR(allowFreeing)), _interactionType != 0, (vehicle ACE_player) != ACE_player, !(ACE_player getVariable ["ace_captives_isHandcuffed", false])];
+
 //Ignore self-interaction menu or mounted vehicle interaction
 if (
-    !(QGVAR(allowFreeing)) ||
+    !(GVAR(allowFreeing)) ||
     (_interactionType != 0) || 
     {(vehicle ACE_player) != ACE_player} || 
     {!(ACE_player getVariable ["ace_captives_isHandcuffed", false])}

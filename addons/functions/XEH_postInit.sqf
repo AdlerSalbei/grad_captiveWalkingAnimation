@@ -38,3 +38,4 @@ if (!hasInterface) exitWith {};
 },
 {false},
 [DIK_F1, [true, false, false]], true] call CBA_fnc_addKeybind; // Shift + F1
+

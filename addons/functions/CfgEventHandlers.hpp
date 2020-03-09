@@ -3,19 +3,17 @@ class Extended_PreStart_EventHandlers {
         init = QUOTE(call COMPILE_FILE(XEH_preStart));
     };
 };
-
 class Extended_PreInit_EventHandlers {
     class ADDON {
         init = QUOTE(call COMPILE_FILE(XEH_preInit));
     };
 };
-
 class Extended_PostInit_EventHandlers {
     class ADDON {
         init = QUOTE(call COMPILE_FILE(XEH_postInit));
+        clientInit = QUOTE(call COMPILE_FILE(XEH_clientInit));
     };
 };
-
 //release escorted captive when entering a vehicle
 class Extended_GetIn_EventHandlers {
     class All {
@@ -48,7 +46,6 @@ class Extended_Respawn_EventHandlers {
         };
     };
 };
-
 class Extended_Local_EventHandlers {
     class CAManBase {
         class ace_captives {
@@ -56,7 +53,6 @@ class Extended_Local_EventHandlers {
         };
     };
 };
-
 class Extended_Killed_EventHandlers {
     class CAManBase {
         class ace_captives {
