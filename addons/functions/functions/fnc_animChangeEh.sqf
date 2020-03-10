@@ -17,9 +17,8 @@
 
 params ["_unit"];
 
-private _animChangedEHID = _unit addEventHandler ["AnimChanged",
-   {
-      _this call FUNC(handleAnimChangedHandcuffed);
+private _animChangedEHID = _unit addEventHandler ["AnimChanged",{
+    _this call FUNC(handleAnimChangedHandcuffed);
 }];
 _unit setVariable ["ace_captives_handcuffAnimEHID", _animChangedEHID];
 TRACE_2("Adding animChangedEH",_unit,_animChangedEHID);

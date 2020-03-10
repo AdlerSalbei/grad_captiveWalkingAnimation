@@ -8,8 +8,6 @@
 
 params ["_interactionType"];
 
-systemChat format ["%1, %2, %3, %4", !(GVAR(allowFreeing)), _interactionType != 0, (vehicle ACE_player) != ACE_player, !(ACE_player getVariable ["ace_captives_isHandcuffed", false])];
-
 //Ignore self-interaction menu or mounted vehicle interaction
 if (
     !(GVAR(allowFreeing)) ||
