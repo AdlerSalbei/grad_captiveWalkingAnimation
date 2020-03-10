@@ -20,12 +20,10 @@ if (!hasInterface) exitWith {};
 
 [219, [false, false, false], {
     if (
-        !(GVAR(allowFreeing)) ||
-        {(vehicle ACE_player) != ACE_player} || 
-        {!(ACE_player getVariable ["ace_captives_isHandcuffed", false])}
+        (GVAR(allowFreeing)) ||
+        {(vehicle ACE_player) == ACE_player} || 
+        {(ACE_player getVariable ["ace_captives_isHandcuffed", false])}
     )then {
         [] call FUNC(interactionEH);
     };  
 },"keydown", nil, false] call CBA_fnc_addKeyHandler;
-
-

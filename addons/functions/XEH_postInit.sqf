@@ -21,3 +21,19 @@
 //Medical Integration Events
 ["ace_unconscious", FUNC(handleOnUnconscious)] call CBA_fnc_addEventHandler;
 
+["isNotHandcuffed"] call ace_common_fnc_removeCanInteractWithCondition;
+
+["isNotHandcuffed", {
+    params ["_unit", "_target"];
+
+    private _return = false;
+    if (!GETVAR(_unit,ace_captives_isHandcuffed),false)) then {
+        _return = true;
+    } else {
+        if (GVAR(allowFreeing) && {isNull _target || (typeOf _target isEqualTo "ACE_LogicDummy" && GETVAR(_target,GVAR(forFreeing),false))}) then {
+            _return = true;
+        };
+    };
+
+    _return
+}] call ace_common_fnc_addCanInteractWithCondition;
