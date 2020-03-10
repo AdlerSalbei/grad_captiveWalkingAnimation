@@ -6,16 +6,6 @@
 *   Adapted for grad_captiveWalkingAnimation by Salbei
 */
 
-params ["_interactionType"];
-
-//Ignore self-interaction menu or mounted vehicle interaction
-if (
-    !(GVAR(allowFreeing)) ||
-    (_interactionType != 0) || 
-    {(vehicle ACE_player) != ACE_player} || 
-    {!(ACE_player getVariable ["ace_captives_isHandcuffed", false])}
-) exitWith {};
-
 systemChat "interactEH 1";
 
 [
@@ -55,8 +45,8 @@ systemChat "interactEH 1";
                         _objHelped pushBack _x;
                         private _helper = "ACE_LogicDummy" createVehicleLocal [0,0,0];
                         private _action = [
-                            QGVAR(rubFree),
-                            "Kabelbinder am Baum aufreiben",
+                            QGVAR(breakCableTie),
+                            localize LSTRING(breakCableTie),
                             "\z\ace\addons\captives\ui\handcuff_ca.paa", 
                             _fncStatement, 
                             _fncCondition, 

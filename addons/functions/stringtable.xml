@@ -37,5 +37,9 @@
             <English>Freeing</English>
             <German>Befreiung</German>
         </Key>
+        <Key ID="STR_grad_captiveWalkingAnimation_functions_breakCableTie">
+            <English>Break Cable Tie</English>
+            <German>Kabelbinder aufreiben</German>
+        </Key>
     </Package>
 </Project>

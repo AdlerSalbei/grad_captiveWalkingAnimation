@@ -64,10 +64,6 @@ if (_state) then {
             [_unit, "forceWalk", "ace_captives_Handcuffed", true] call ace_common_fnc_statusEffect_set;
 
             [_unit] call FUNC(handleCaptivAnim);
-
-            if(GVAR(allowFreeing)) then {
-                [true] call FUNC(enableInteraction);
-            };
         } else {
             [_unit, "ACE_HandcuffedFFV", 2] call ace_common_fnc_doAnimation;
             [_unit, "ACE_HandcuffedFFV", 1] call ace_common_fnc_doAnimation;
@@ -85,9 +81,6 @@ if (_state) then {
         [_pfID] call CBA_fnc_removePerFrameHandler;
         [_unit, "AnimCableStandEnd"] call ace_common_fnc_doGesture;
 
-        if(GVAR(allowFreeing)) then {
-            [false] call FUNC(enableInteraction);
-        };
 
         _pfID = _unit getVariable ["ace_captives_handcuffAnimEHID", -1];
         if (_pfID != -1) then {
