@@ -27,10 +27,10 @@
     params ["_unit", "_target"];
 
     private _return = false;
-    if (!GETVAR(_unit,ace_captives_isHandcuffed),false) then {
+    if !(_unit getVariable ["ace_captives_isHandcuffed",false]) then {
         _return = true;
     } else {
-        if (GVAR(allowFreeing) && {isNull _target || (typeOf _target isEqualTo "ACE_LogicDummy" && GETVAR(_target,GVAR(forFreeing),false))}) then {
+        if (GVAR(allowFreeing) && {isNull _target || (typeOf _target isEqualTo "ACE_LogicDummy" && _target getVarable [QGVAR(forFreeing),false])}) then {
             _return = true;
         };
     };
