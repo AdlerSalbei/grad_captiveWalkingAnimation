@@ -24,7 +24,7 @@ if (GVAR(allowWalkingWhileCaptiv) && {isPlayer _unit} && {!(_unit getVariable ["
         _unit action ["SwitchWeapon", _unit, _unit, 100];
         [_unit, "AmovPercMstpSrasWrflDnon_AmovPercMstpSnonWnonDnon", 1] call ace_common_fnc_doAnimation;
 
-        _handle = [{
+        private _handle = [{
             params ["_unit", "_handle"];
             if (!(alive _unit) || {!(_unit getVariable ["ace_captives_isHandcuffed", false])} || {vehicle _unit != _unit}) exitWith {
                 [_handle] call CBA_fnc_removePerFrameHandler;

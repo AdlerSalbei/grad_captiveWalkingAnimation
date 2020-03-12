@@ -66,7 +66,7 @@ if (_state) then {
         };
 
         if (!(_unit getVariable ["ace_captives_isEscorting", false])) then {
-            [(_this select 1)] call CBA_fnc_removePerFrameHandler;
+            [_pfID] call CBA_fnc_removePerFrameHandler;
             [objNull, _target, false] call ace_common_fnc_claim;
             detach _target;
             _unit removeAction _actionID;

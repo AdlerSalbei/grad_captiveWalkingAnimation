@@ -16,7 +16,7 @@
  * Public: No
  */
 
-params ["_unit","_dead"];
+params ["_unit", "_dead"];
 TRACE_2("handleRespawn",_unit,_dead);
 
 if (!local _unit) exitWith {};
