@@ -6,7 +6,7 @@ private _strengthLeft = _unit getVariable [QGVAR(handCuffStrength), 100];
 
 if (_strengthLeft < 0) exitWith {
     addCamShake [60, 1.2, 4]; 
-    //_unit say3D "GRAD_arrestMechanics_snap";
+    playSound3D [QUOTE(PATHTO_R(sounds\snap.ogg)), objNull, false, (getPosASL _unit), 1, 1, 10];
     _unit setVariable [QGVAR(handCuffStrength), 100];
 
     [_unit, false] call FUNC(setHandcuffed);
@@ -19,7 +19,7 @@ private _fnc_onFinish = {
     params ["_unit"];
     
     addCamShake [60, 1.2, 4]; 
-    //_unit say3D "GRAD_arrestMechanics_snap";
+    playSound3D [QUOTE(PATHTO_R(sounds\snap.ogg)), objNull, false, (getPosASL _unit), 1, 1, 10];
     _unit setVariable [QGVAR(handCuffStrength), 100];
 
     [_unit, false] call FUNC(setHandcuffed);
@@ -40,11 +40,12 @@ private _fnc_condition = {
     params ["_unit"];
 
     if !(_unit getVariable [QGVAR(fleeing), false]) exitWith { false };
+    if !(_unit getVariable ["ace_captives_isHandcuffed", false]) exitWith { false };
      
     true
 };
 
-[((QGVAR(freeingTime)/100) * _strengthleft), _unit, _fnc_onFinish, _fnc_onFailure, localize LSTRING(freeing), _fnc_condition] call ace_common_fnc_progressBar;
+[((GVAR(freeingTime)/100) * _strengthleft), _unit, _fnc_onFinish, _fnc_onFailure, localize LSTRING(freeing), _fnc_condition] call ace_common_fnc_progressBar;
 
 //PFH for effects and sounds
 [{
@@ -55,11 +56,12 @@ private _fnc_condition = {
         [_handle] call CBA_fnc_removePerFrameHandler;
     };
 
-    _unit say3D (selectRandom [
-        "GRAD_arrestMechanics_rub1",
-        "GRAD_arrestMechanics_rub2",
-        "GRAD_arrestMechanics_rub3"
-    ]);
+    private _sound = selectRandom [
+        QUOTE(PATHTO_R(sounds\rub1.ogg)),
+        QUOTE(PATHTO_R(sounds\rub2.ogg)),
+        QUOTE(PATHTO_R(sounds\rub3.ogg))
+    ];
+    playSound3D [_sound, objNull, false, (getPosASL _unit), 1, 1, 10];
 
     addCamShake [1, 0.8, random 25];
 }, 1, [_unit]] call CBA_fnc_addPerFrameHandler;

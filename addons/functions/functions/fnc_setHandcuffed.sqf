@@ -100,6 +100,7 @@ if (_state) then {
 
     if (_unit == ACE_player) then {
         ["captive", []] call ace_common_fnc_showHud; //same as showHud true;
+        _unit setVariable [QGVAR(fleeing), false];
     };
 };
 

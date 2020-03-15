@@ -20,8 +20,8 @@ if (!hasInterface) exitWith {};
 
 [219, [false, false, false], {
     if (
-        (GVAR(allowFreeing)) ||
-        {(vehicle ACE_player) == ACE_player} || 
+        (GVAR(allowFreeing)) &&
+        {(vehicle ACE_player) == ACE_player} && 
         {(ACE_player getVariable ["ace_captives_isHandcuffed", false])}
     )then {
         [] call FUNC(interactionEH);

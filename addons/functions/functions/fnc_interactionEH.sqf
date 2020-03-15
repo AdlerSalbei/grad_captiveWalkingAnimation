@@ -6,12 +6,12 @@
 *   Adapted for grad_captiveWalkingAnimation by Salbei
 */
 
-systemChat "interactEH 1";
-
 [
     {
         params ["_args", "_pfID"];
         _args params ["_setPosition", "_addedHelpers", "_objHelped", "_helperQueue"];
+
+        systemChat "interactEH 1";
 
         if (!ace_interact_menu_keydown) then {
             {deleteVehicle _x; nil} count _addedHelpers;
@@ -46,7 +46,8 @@ systemChat "interactEH 1";
                         private _helper = "ACE_LogicDummy" createVehicleLocal [0,0,0];
                         private _action = [
                             QGVAR(breakCableTie),
-                            localize LSTRING(breakCableTie),
+                            //localize LSTRING(breakCableTie),
+                            "Break",
                             "\z\ace\addons\captives\ui\handcuff_ca.paa", 
                             _fncStatement, 
                             _fncCondition, 
@@ -63,6 +64,8 @@ systemChat "interactEH 1";
                     };
                     nil
                 } count (nearestTerrainObjects [ace_player, ["TREE", "SMALL TREE", "ROCK", "ROCKS"], 15]);
+
+                systemChat format ["%1", _addedHelpers];
 
                 [
                     {
