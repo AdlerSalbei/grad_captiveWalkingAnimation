@@ -46,8 +46,7 @@
                         private _helper = "ACE_LogicDummy" createVehicleLocal [0,0,0];
                         private _action = [
                             QGVAR(breakCableTie),
-                            //localize LSTRING(breakCableTie),
-                            "Break",
+                            localize LSTRING(breakCableTie),
                             "\z\ace\addons\captives\ui\handcuff_ca.paa", 
                             _fncStatement, 
                             _fncCondition, 
