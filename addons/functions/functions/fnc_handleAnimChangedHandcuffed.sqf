@@ -18,6 +18,9 @@
 
 params ["_unit", "_newAnimation"];
 TRACE_2("AnimChanged",_unit,_newAnimation);
+
+if !(_unit getVariable ["ace_captives_isHandcuffed", false]) exitWith {};
+
 if (_unit == (vehicle _unit)) then {
     private _oldAnimation =_unit getVariable [QGVAR(animation), ""];
     if ((_oldAnimation == "ACE_AmovPercMstpSsurWnonDnon") && {(_newAnimation != _oldAnimation)} && {!(_unit getVariable ["ACE_isUnconscious", false])}) then {

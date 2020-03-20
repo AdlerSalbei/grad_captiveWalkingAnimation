@@ -75,17 +75,19 @@ if (_state) then {
     [_unit, "blockThrow", "ace_captives_Handcuffed", false] call ace_common_fnc_statusEffect_set;
     [_unit, "forceWalk", "ace_captives_Handcuffed", false] call ace_common_fnc_statusEffect_set;
     
+    _unit setVariable [QGVAR(animation), ""];
+
     private _pfID = _unit getVariable [QGVAR(PFH), -1];
     if (_pfID != -1) then {
         _unit setVariable [QGVAR(PFH), -1];
         [_pfID] call CBA_fnc_removePerFrameHandler;
         [_unit, "AnimCableStandEnd"] call ace_common_fnc_doGesture;
-
+        _unit removeEventHandler ["AnimDone", GVAR(EH)];
+        GVAR(EH) = -1;
 
         _pfID = _unit getVariable ["ace_captives_handcuffAnimEHID", -1];
         if (_pfID != -1) then {
             _unit setVariable ["ace_captives_handcuffAnimEHID", -1];
-            _unit removeEventHandler ["AnimChanged", _pfID];
         };
     };
 

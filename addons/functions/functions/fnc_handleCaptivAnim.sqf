@@ -35,9 +35,13 @@ if (GVAR(allowWalkingWhileCaptiv) && {isPlayer _unit} && {!(_unit getVariable ["
             if (currentWeapon _unit != "") then {
                 _unit action ["SwitchWeapon", _unit, _unit, 100];
                 [_unit, "amovpercmstpsnonwnondnon", 1] call ace_common_fnc_doAnimation;
-                [{
-                [_this, "AnimCableStandLoop"] call ace_common_fnc_doGesture;
-                },_unit, 0.1] call CBA_fnc_waitAndExecute;
+               
+                for "_i" from 1 to 5 do {
+                    [{
+                        params ["_unit"];
+                        [_unit, "AnimCableStandLoop"] call ace_common_fnc_doGesture;
+                    }, _unit, _i] call CBA_fnc_waitAndExecute;
+                };
             };
         }, 0, _unit] call CBA_fnc_addPerFrameHandler;
 

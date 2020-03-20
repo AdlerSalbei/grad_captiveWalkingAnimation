@@ -19,7 +19,7 @@ private _fnc_onFinish = {
     params ["_unit"];
     
     addCamShake [60, 1.2, 4]; 
-    playSound3D [QUOTE(PATHTO_R(sounds\snap.ogg)), objNull, false, (getPosASL _unit), 1, 1, 10];
+    playSound3D [QUOTE(PATHTO_R(sounds\snap.ogg)), objNull, false, (getPosASL _unit), 5, 1, 25];
     _unit setVariable [QGVAR(handCuffStrength), 100];
 
     [_unit, false] call FUNC(setHandcuffed);
@@ -61,7 +61,7 @@ private _fnc_condition = {
         QUOTE(PATHTO_R(sounds\rub2.ogg)),
         QUOTE(PATHTO_R(sounds\rub3.ogg))
     ];
-    playSound3D [_sound, objNull, false, (getPosASL _unit), 1, 1, 10];
+    playSound3D [_sound, objNull, false, (getPosASL _unit), 5, 1, 25];
 
     addCamShake [1, 0.8, random 25];
 }, 1, [_unit]] call CBA_fnc_addPerFrameHandler;
