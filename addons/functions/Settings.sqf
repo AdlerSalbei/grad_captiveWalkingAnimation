@@ -36,10 +36,31 @@ GVAR(captivityEnabled) = false;
 ] call CBA_Settings_fnc_init;
 
 [
+    QGVAR(allowFreeingInVehicle), 
+    "CHECKBOX", 
+    [
+        localize LSTRING(allowFreeingInVehicle_displayName), 
+        localize LSTRING(allowFreeingInVehicle_tooltip)
+    ], 
+    localize LSTRING(settingCategory), 
+    true,
+    true
+] call CBA_Settings_fnc_init;
+
+[
     QGVAR(freeingTime), 
     "SLIDER", 
     localize LSTRING(freeingTime), 
     localize LSTRING(settingCategory), 
     [5, 450, 35, 0], 
+    true
+] call CBA_Settings_fnc_init;
+
+[
+    QGVAR(freeingTimeInVehicle), 
+    "SLIDER", 
+    localize LSTRING(freeingTimeInVehicle), 
+    localize LSTRING(settingCategory), 
+    [5, 1500, 120, 0], 
     true
 ] call CBA_Settings_fnc_init;

@@ -14,6 +14,12 @@ if (_strengthLeft < 0) exitWith {
 
 _unit setVariable [QGVAR(fleeing), true];
 
+private _time = if ((vehicle ACE_player) isEqualTo ACE_player) then {
+    GVAR(freeingTime)
+} else {
+    GVAR(freeingTimeInVehicle)
+};
+
 // Create progress bar
 private _fnc_onFinish = {
     params ["_unit"];
@@ -45,7 +51,7 @@ private _fnc_condition = {
     true
 };
 
-[((GVAR(freeingTime)/100) * _strengthleft), _unit, _fnc_onFinish, _fnc_onFailure, localize LSTRING(freeing), _fnc_condition] call ace_common_fnc_progressBar;
+[((_time/100) * _strengthleft), _unit, _fnc_onFinish, _fnc_onFailure, localize LSTRING(freeing), _fnc_condition] call ace_common_fnc_progressBar;
 
 //PFH for effects and sounds
 [{

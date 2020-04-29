@@ -26,10 +26,18 @@ class CfgVehicles {
         };
 
         class ACE_SelfActions {
+            exceptions[] = {"isNotHandcuffed"};
             class ACE_StopEscortingSelf {
                 statement = QUOTE([ARR_3(_player,objNull, false)] call FUNC(doEscortCaptive));
             };
-
+            class GVAR(freeInVehicle) {
+                displayName = CSTRING(breakCableTie);
+                icon = "\z\ace\addons\captives\ui\handcuff_ca.paa";
+                condition = QUOTE([_player] call FUNC(canFreeInVehicle));
+                statement = QUOTE([_player] call FUNC(freeUnit));
+                exceptions[] = {"isNotHandcuffed"};
+                showDisabled = 0;
+            };
         };
     };
 
@@ -75,5 +83,14 @@ class CfgVehicles {
 
     class ace_captives_ModuleHandcuffed: Module_F {
         function = QFUNC(moduleHandcuffed);
+    };
+
+    class Land_HelipadEmpty_F;
+    class ACE_LogicDummy: Land_HelipadEmpty_F {
+        class ACE_Actions {
+            class ACE_MainActions {
+            exceptions[] = {"isNotHandcuffed"};
+            };
+        };
     };
 };

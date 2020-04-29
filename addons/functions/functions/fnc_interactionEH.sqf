@@ -60,7 +60,7 @@
                         _helperQueue pushBack [_helper, _x];
                     };
                     nil
-                } count (nearestTerrainObjects [ace_player, ["TREE", "SMALL TREE", "ROCK", "ROCKS"], 15]);
+                } count (nearestTerrainObjects [ace_player, ["TREE", "SMALL TREE"], 15]);
 
                 [
                     {

@@ -1,6 +1,7 @@
 PREP(addLoadCaptiveActions);
 PREP(animChangeEh);
 PREP(canFree);
+PREP(canFreeInVehicle);
 PREP(doApplyHandcuffs);
 PREP(doEscortCaptive);
 PREP(doLoadCaptive);

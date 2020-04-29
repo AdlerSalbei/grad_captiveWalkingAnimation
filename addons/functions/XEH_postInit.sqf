@@ -27,12 +27,17 @@
     params ["_unit", "_target"];
 
     private _return = false;
-    if !(_unit getVariable ["ace_captives_isHandcuffed",false]) then {
+    if !(_unit getVariable ["ace_captives_isHandcuffed", false]) then {
         _return = true;
     } else {
-        if (GVAR(allowFreeing) && {isNull _target || (typeOf _target isEqualTo "ACE_LogicDummy" && _target getVariable [QGVAR(forFreeing),false])}) then {
+        if (GVAR(allowFreeing) && {_unit getVariable ["ace_captives_isHandcuffed", false]} && {isNull _target || (typeOf _target isEqualTo "ACE_LogicDummy" && _target getVariable [QGVAR(forFreeing), false])}) then {
             _return = true;
         };
+        /*
+        if (GVAR(allowFreeingInVehicle) && {_unit getVariable ["ace_captives_isHandcuffed", false]} && {!(isNull objectParent player)}) then { 
+            _return = true;
+        };
+        */
     };
 
     _return

@@ -41,5 +41,17 @@
             <English>Break Cable Tie</English>
             <German>Kabelbinder aufreiben</German>
         </Key>
+        <Key ID="STR_grad_captiveWalkingAnimation_functions_allowFreeingInVehicle_displayName">
+            <English>Allow freeing in vehicle</English>
+            <German>Entfesseln erlauben in Fahrzeugen</German>
+        </Key>
+        <Key ID="STR_grad_captiveWalkingAnimation_functions_allowFreeingInVehicle_tooltip">
+            <English>Allows the player to remove his cuffs in Vehicles</English>
+            <German>Erlaubt es das ein Spieler seine Fesseln in einem Fahrzeug zu entfernen</German>
+        </Key>
+        <Key ID="STR_grad_captiveWalkingAnimation_functions_freeingTimeInVehicle">
+            <English>Freeing time in Vehicle</English>
+            <German>Befreiungs Zeit im Fahrzeug</German>
+        </Key>
     </Package>
 </Project>
