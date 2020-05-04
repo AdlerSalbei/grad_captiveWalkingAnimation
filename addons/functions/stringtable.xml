@@ -53,5 +53,13 @@
             <English>Freeing time in Vehicle</English>
             <German>Befreiungs Zeit im Fahrzeug</German>
         </Key>
+        <Key ID="STR_grad_captiveWalkingAnimation_functions_settingAllowRunning_displayName">
+            <English>Allow running</English>
+            <German>Rennen erlauben</German>
+        </Key>
+        <Key ID="STR_grad_captiveWalkingAnimation_functions_settingAllowRunning_tooltip">
+            <English>Allows the player to run while captive</English>
+            <German>Erlaubt es dase der Spieler rennt, während er gefangen ist</German>
+        </Key>
     </Package>
 </Project>

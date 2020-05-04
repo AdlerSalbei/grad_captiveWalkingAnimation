@@ -61,7 +61,9 @@ if (_state) then {
         if ((vehicle _unit) == _unit) then {
             [_unit] call ace_common_fnc_fixLoweredRifleAnimation;
             [_unit, "blockThrow", "ace_captives_Handcuffed", true] call ace_common_fnc_statusEffect_set;
-            [_unit, "forceWalk", "ace_captives_Handcuffed", true] call ace_common_fnc_statusEffect_set;
+            if !(GVAR(allowRunning)) then {
+                [_unit, "forceWalk", "ace_captives_Handcuffed", true] call ace_common_fnc_statusEffect_set;
+            };
 
             [_unit] call FUNC(handleCaptivAnim);
         } else {
