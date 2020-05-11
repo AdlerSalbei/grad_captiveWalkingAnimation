@@ -3,7 +3,7 @@
 /*
 *   Original function from ace_logistics_wirecutter by PabstMirror
 *   Adapted for grad_axe by McDiod
-*   Adapted for grad_captiveWalkingAnimation by Salbei
+*   Adapted for grad_captiveWalking by Salbei
 */
 
 [

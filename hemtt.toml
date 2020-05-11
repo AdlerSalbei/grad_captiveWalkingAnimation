@@ -1,5 +1,5 @@
-name = "GRAD Captive Walking Animation"
-prefix = "grad_captiveWalkingAnimation"
+name = "GRAD Captive Walking"
+prefix = "grad_captiveWalking"
 author = "Salbei"
 files = [
     "mod.cpp",
@@ -12,7 +12,7 @@ keyname = "{{prefix}}_{{version}}"
 signame = "{{prefix}}_{{version}}-{{git \"id 8\"}}"
 
 releasebuild = [
-    "@zip grad_captiveWalkingAnimation_{{semver.major}}.{{semver.minor}}.{{semver.patch}}"
+    "@zip grad_captiveWalking_{{semver.major}}.{{semver.minor}}.{{semver.patch}}"
 ]
 
 [header_exts]

@@ -11,7 +11,7 @@
  * None
  *
  * Example:
- * [bob, true] call grad_captiveWalkingAnimation_functions_fnc_setHandcuffed;
+ * [bob, true] call grad_captiveWalking_functions_fnc_setHandcuffed;
  *
  * Public: No
  */

@@ -1,63 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="GRAD">
     <Package name="CaptiveWalkingAnimation">
-        <Key ID="STR_grad_captiveWalkingAnimation_functions_settingAllowWalkingWhileCaptiv_displayName">
+        <Key ID="STR_grad_captiveWalking_functions_settingAllowWalkingWhileCaptiv_displayName">
             <English>Allow Captives walking</English>
             <German>Gefangenen laufen erlauben</German>
         </Key>
-        <Key ID="STR_grad_captiveWalkingAnimation_functions_settingAllowWalkingWhileCaptiv_tooltip">
+        <Key ID="STR_grad_captiveWalking_functions_settingAllowWalkingWhileCaptiv_tooltip">
             <English>Allow Captives walking</English>
             <German>Gefangenen laufen erlauben</German>
         </Key>
-        <Key ID="STR_grad_captiveWalkingAnimation_functions_settingCategory">
+        <Key ID="STR_grad_captiveWalking_functions_settingCategory">
             <English>GRAD CaptiveWalkingAnimation</English>
             <German>GRAD CaptiveWalkingAnimation</German>
         </Key>
-        <Key ID="STR_grad_captiveWalkingAnimation_functions_settingDisableEscorting_displayName">
+        <Key ID="STR_grad_captiveWalking_functions_settingDisableEscorting_displayName">
             <English>Disable player escorting</English>
             <German>Spieler Escortieren deaktivierenn</German>
         </Key>
-        <Key ID="STR_grad_captiveWalkingAnimation_functions_settingDisableEscorting_tooltip">
+        <Key ID="STR_grad_captiveWalking_functions_settingDisableEscorting_tooltip">
             <English>Disable the escorting for Players</English>
             <German>Deaktiviert das eskortieren von Spielern</German>
         </Key>
-        <Key ID="STR_grad_captiveWalkingAnimation_functions_allowFreeing_displayName">
+        <Key ID="STR_grad_captiveWalking_functions_allowFreeing_displayName">
             <English>Allow freeing</English>
             <German>Entfesseln erlauben</German>
         </Key>
-        <Key ID="STR_grad_captiveWalkingAnimation_functions_allowFreeing_tooltip">
+        <Key ID="STR_grad_captiveWalking_functions_allowFreeing_tooltip">
             <English>Allows the player to remove his cuffs on a Tree or Rock</English>
             <German>Erlaubt es das ein Spieler seine Fesseln an einem Baum oder Felsen entfernt</German>
         </Key>
-        <Key ID="STR_grad_captiveWalkingAnimation_functions_freeingTime">
+        <Key ID="STR_grad_captiveWalking_functions_freeingTime">
             <English>Freeing time</English>
             <German>Befreiungs Zeit</German>
         </Key>
-        <Key ID="STR_grad_captiveWalkingAnimation_functions_freeing">
+        <Key ID="STR_grad_captiveWalking_functions_freeing">
             <English>Freeing</English>
             <German>Befreiung</German>
         </Key>
-        <Key ID="STR_grad_captiveWalkingAnimation_functions_breakCableTie">
+        <Key ID="STR_grad_captiveWalking_functions_breakCableTie">
             <English>Break Cable Tie</English>
             <German>Kabelbinder aufreiben</German>
         </Key>
-        <Key ID="STR_grad_captiveWalkingAnimation_functions_allowFreeingInVehicle_displayName">
+        <Key ID="STR_grad_captiveWalking_functions_allowFreeingInVehicle_displayName">
             <English>Allow freeing in vehicle</English>
             <German>Entfesseln erlauben in Fahrzeugen</German>
         </Key>
-        <Key ID="STR_grad_captiveWalkingAnimation_functions_allowFreeingInVehicle_tooltip">
+        <Key ID="STR_grad_captiveWalking_functions_allowFreeingInVehicle_tooltip">
             <English>Allows the player to remove his cuffs in Vehicles</English>
             <German>Erlaubt es das ein Spieler seine Fesseln in einem Fahrzeug zu entfernen</German>
         </Key>
-        <Key ID="STR_grad_captiveWalkingAnimation_functions_freeingTimeInVehicle">
+        <Key ID="STR_grad_captiveWalking_functions_freeingTimeInVehicle">
             <English>Freeing time in Vehicle</English>
             <German>Befreiungs Zeit im Fahrzeug</German>
         </Key>
-        <Key ID="STR_grad_captiveWalkingAnimation_functions_settingAllowRunning_displayName">
+        <Key ID="STR_grad_captiveWalking_functions_settingAllowRunning_displayName">
             <English>Allow running</English>
             <German>Rennen erlauben</German>
         </Key>
-        <Key ID="STR_grad_captiveWalkingAnimation_functions_settingAllowRunning_tooltip">
+        <Key ID="STR_grad_captiveWalking_functions_settingAllowRunning_tooltip">
             <English>Allows the player to run while captive</English>
             <German>Erlaubt es dase der Spieler rennt, während er gefangen ist</German>
         </Key>

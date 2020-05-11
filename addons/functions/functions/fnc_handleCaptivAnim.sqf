@@ -10,7 +10,7 @@
  * None
  *
  * Example:
- * [bob] call grad_captiveWalkingAnimation_fnc_handleCaptivAnim
+ * [bob] call grad_captiveWalking_fnc_handleCaptivAnim
  *
  * Public: No
  */
