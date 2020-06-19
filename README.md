@@ -14,4 +14,6 @@ This project is also hosted on GitHub: https://github.com/gruppe-adler/grad_capt
 Feel free to report issues and submit pull requests there.
 There will be no non ACE version.
 
+Big thanks to Bnae for his Animations: https://forums.bohemia.net/forums/topic/211279-animation-dump/
+
 License: https://github.com/gruppe-adler/grad_captiveWalking/blob/master/LICENSE
