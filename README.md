@@ -15,7 +15,6 @@ Feel free to report issues and submit pull requests there.
 There will be no non ACE version.
 
 Big thanks to Bnae for his Animations: https://forums.bohemia.net/forums/topic/211279-animation-dump/
-There will be no Non ACE version.
 License: https://github.com/gruppe-adler/grad_captiveWalking/blob/master/LICENSE
 
 ![pic1](https://imgur.com/U4fBVlN.jpg)
