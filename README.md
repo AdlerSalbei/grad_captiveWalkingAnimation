@@ -8,12 +8,12 @@ Gruppe Adler Captive Walking (short: GRAD Captive Walking) adds a walking animat
 
 Features:
 - Animation for ACE Captive state
-- Breaking ties on Trees
+- Breaking ties by rubbing them on trees
 
 This project is also hosted on GitHub: https://github.com/gruppe-adler/grad_captiveWalking
 Feel free to report issues and submit pull requests there.
 There will be no non ACE version.
 
 Big thanks to Bnae for his Animations: https://forums.bohemia.net/forums/topic/211279-animation-dump/
-
+There will be no Non ACE version.
 License: https://github.com/gruppe-adler/grad_captiveWalking/blob/master/LICENSE
