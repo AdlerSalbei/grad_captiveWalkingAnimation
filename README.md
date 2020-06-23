@@ -18,6 +18,6 @@ Big thanks to Bnae for his Animations: https://forums.bohemia.net/forums/topic/2
 There will be no Non ACE version.
 License: https://github.com/gruppe-adler/grad_captiveWalking/blob/master/LICENSE
 
-[](https://imgur.com/U4fBVlN.jpg)
-[](https://imgur.com/rAms8ng.jpg)
-[](https://imgur.com/gCQ1lfu.jpg)
+![pic1](https://imgur.com/U4fBVlN.jpg)
+![pic2](https://imgur.com/rAms8ng.jpg)
+![pic3](https://imgur.com/gCQ1lfu.jpg)
