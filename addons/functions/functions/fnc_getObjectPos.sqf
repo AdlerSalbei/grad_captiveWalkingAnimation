@@ -1,4 +1,19 @@
 #include "script_component.hpp"
+/*
+ * Author: Salbei
+ * Get's tree object.
+ *
+ * Arguments:
+ * 0: TREE <OBJECT>
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [tree] call grad_captiveWalking_functions_fnc_getObjectPos
+ *
+ * Public: No
+ */
 
 params [["_tree", objNull]];
 

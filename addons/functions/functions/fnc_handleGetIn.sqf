@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: commy2
+ * Author: commy2, Salbei
  * Handles when a unit gets in to a vehicle.  Release escorted captive when entering a vehicle
  *
  * Arguments:

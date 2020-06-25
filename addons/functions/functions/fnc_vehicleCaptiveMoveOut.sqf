@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: PabstMirror
+ * Author: PabstMirror, Salbei
  * Unloads a captive from a vehicle.
  *
  * Arguments:

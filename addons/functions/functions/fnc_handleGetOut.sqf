@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: commy2
+ * Author: commy2, Salbei
  * Handles when a captive unit gets out of a vehicle.
  *
  * Arguments:

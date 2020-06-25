@@ -1,10 +1,20 @@
 #include "script_component.hpp"
 
 /*
-*   Original function from ace_logistics_wirecutter by PabstMirror
-*   Adapted for grad_axe by McDiod
-*   Adapted for grad_captiveWalking by Salbei
-*/
+ * Author: McDiod, Salbei
+ * Interaction eventhandler PFH for freeing.
+ *
+ * Arguments:
+ * 0: _unit <OBJECT>
+ *
+ * Return Value:
+ * The return value <BOOL>
+ *
+ * Example:
+ * [bob] call grad_captiveWalking_functions_fnc_interactionEH
+ *
+ * Public: No
+ */
 
 [
     {

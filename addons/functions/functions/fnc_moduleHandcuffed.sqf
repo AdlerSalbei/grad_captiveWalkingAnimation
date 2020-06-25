@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: PabstMirror
+ * Author: PabstMirror, Salbei
  * Module Function to make a unit handcuffed (can be called from editor)
  * Also used for threeden attribute expression with dummy Logic Object
  *

@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: commy2, PabstMirror
+ * Author: commy2, PabstMirror, Salbei
  * Handles the "ace_unconscious" event
  *
  * Arguments:
@@ -16,7 +16,7 @@
  * Public: No
  */
 
-params ["_unit","_isUnconc"];
+params ["_unit", "_isUnconc"];
 
 if (!local _unit) exitWith {};
 

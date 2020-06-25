@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: esteldunedain
+ * Author: esteldunedain, Salbei
  * Called when a unit switched locality
  *
  * Arguments:

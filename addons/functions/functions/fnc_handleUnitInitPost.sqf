@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: commy2
+ * Author: commy2, Salbei
  * handle captive and unconsciousness state and prevent grenades
  *
  * Arguments:

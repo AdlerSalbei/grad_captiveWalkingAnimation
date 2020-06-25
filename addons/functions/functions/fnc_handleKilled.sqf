@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: Jonpas
+ * Author: Jonpas, Salbei
  * Called when a unit dies.
  *
  * Arguments:

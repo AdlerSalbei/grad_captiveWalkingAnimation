@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: commy2 PabstMirror
+ * Author: commy2 PabstMirror, Salbei
  * Fix, because captiveNum doesn't reset properly on respawn
  *
  * Arguments:
