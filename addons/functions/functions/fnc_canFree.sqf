@@ -1,4 +1,21 @@
 #include "script_component.hpp"
+/*
+ * Author: Salbei
+ * Checks if unit can free it self.
+ *
+ * Arguments:
+ * 0: Unit <OBJECT>
+ * 1: Object <OBJECT>
+ * 2: Helper <OBJECT>
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [bob] call grad_captiveWalking_functions_fnc_canFree
+ *
+ * Public: No
+ */
 
 params ["_unit", "_obj", "_helper"];
 

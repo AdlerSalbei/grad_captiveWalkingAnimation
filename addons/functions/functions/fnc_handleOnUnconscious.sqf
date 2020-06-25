@@ -11,7 +11,7 @@
  * None
  *
  * Example:
- * [bob, true] call ACE_captives_fnc_handleOnUnconscious
+ * [bob, true] call grad_captiveWalking_functions_fnc_handleOnUnconscious
  *
  * Public: No
  */

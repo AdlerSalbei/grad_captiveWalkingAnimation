@@ -13,7 +13,7 @@
  * None
  *
  * Example:
- * [objNull, [player], true] call ace_captives_fnc_moduleHandcuffed
+ * [objNull, [player], true] call grad_captiveWalking_functions_fnc_moduleHandcuffed
  *
  * Public: No
  */

@@ -10,7 +10,7 @@
  * None
  *
  * Example:
- * [bob] call ACE_captives_fnc_vehicleCaptiveMoveOut;
+ * [bob] call grad_captiveWalking_functions_fnc_vehicleCaptiveMoveOut;
  *
  * Public: No
  */

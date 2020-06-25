@@ -10,7 +10,7 @@
  * None
  *
  * Example:
- * [bob] call ace_captives_fnc_handleKilled
+ * [bob] call grad_captiveWalking_functions_fnc_handleKilled
  *
  * Public: No
  */

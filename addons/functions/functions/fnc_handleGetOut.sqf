@@ -12,7 +12,7 @@
  * The return value <BOOL>
  *
  * Example:
- * [car2, x, player] call ACE_captives_fnc_handleGetOut
+ * [car2, x, player] call grad_captiveWalking_functions_fnc_handleGetOut
  *
  * Public: No
  */

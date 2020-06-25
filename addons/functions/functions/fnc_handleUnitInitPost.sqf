@@ -10,7 +10,7 @@
  * The return value <BOOL>
  *
  * Example:
- * [bob] call ACE_captives_fnc_handleUnitInitPost
+ * [bob] call grad_captiveWalking_functions_fnc_handleUnitInitPost
  *
  * Public: No
  */

@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: commy2
+ * Author: commy2, Salbei
  * Unit unloads a captive from a vehicle.
  *
  * Arguments:
@@ -11,7 +11,7 @@
  * None
  *
  * Example:
- * [bob, prisoner] call ACE_captives_fnc_doUnloadCaptive
+ * [bob, prisoner] call grad_captiveWalking_functions_fnc_doUnloadCaptive
  *
  * Public: No
  */

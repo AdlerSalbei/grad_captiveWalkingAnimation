@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: 654wak654
+ * Author: 654wak654, Salbei
  * Adds child actions to the "load captive" action for near vehicles.
  *
  * Arguments:
@@ -10,7 +10,7 @@
  * Child actions <ARRAY>
  *
  * Example:
- * [kevin] call ace_medical_fnc_addLoadCaptiveActions
+ * [kevin] call grad_captiveWalking_functions_fnc_addLoadCaptiveActions
  *
  * Public: No
  */

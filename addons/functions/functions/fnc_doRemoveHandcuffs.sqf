@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: PabstMirror
+ * Author: PabstMirror, Salbei
  * Remove handcuffs from a target
  *
  * Arguments:
@@ -10,7 +10,7 @@
  * The return value <BOOL>
  *
  * Example:
- * [bob, false] call ACE_captives_fnc_doRemoveHandcuffs
+ * [bob, false] call grad_captiveWalking_functions_fnc_doRemoveHandcuffs
  *
  * Public: No
  */

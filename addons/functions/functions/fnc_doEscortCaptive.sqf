@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: Nic547
+ * Author: Nic547, Salbei
  * Attaches a Captive to the _unit
  *
  * Arguments:
@@ -12,7 +12,7 @@
  * The return value <BOOL>
  *
  * Example:
- * [player, bob, true] call ACE_captives_fnc_doEscorteCaptive;
+ * [player, bob, true] call grad_captiveWalking_functions_fnc_doEscorteCaptive;
  *
  * Public: No
  */
