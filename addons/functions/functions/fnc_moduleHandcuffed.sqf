@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: PabstMirror
+ * Author: PabstMirror, Salbei
  * Module Function to make a unit handcuffed (can be called from editor)
  * Also used for threeden attribute expression with dummy Logic Object
  *
@@ -13,7 +13,7 @@
  * None
  *
  * Example:
- * [objNull, [player], true] call ace_captives_fnc_moduleHandcuffed
+ * [objNull, [player], true] call grad_captiveWalking_functions_fnc_moduleHandcuffed
  *
  * Public: No
  */

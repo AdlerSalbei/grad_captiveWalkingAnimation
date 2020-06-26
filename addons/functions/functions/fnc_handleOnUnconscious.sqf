@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: commy2, PabstMirror
+ * Author: commy2, PabstMirror, Salbei
  * Handles the "ace_unconscious" event
  *
  * Arguments:
@@ -11,12 +11,12 @@
  * None
  *
  * Example:
- * [bob, true] call ACE_captives_fnc_handleOnUnconscious
+ * [bob, true] call grad_captiveWalking_functions_fnc_handleOnUnconscious
  *
  * Public: No
  */
 
-params ["_unit","_isUnconc"];
+params ["_unit", "_isUnconc"];
 
 if (!local _unit) exitWith {};
 

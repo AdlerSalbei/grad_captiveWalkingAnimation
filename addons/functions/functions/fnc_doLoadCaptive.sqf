@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: commy2
+ * Author: commy2, Salbei
  * Unit loads the target object into a vehicle. (logic same as canLoadCaptive)
  *
  * Arguments:
@@ -12,7 +12,7 @@
  * None
  *
  * Example:
- * [bob, tom, car] call ace_captives_fnc_doLoadCaptive
+ * [bob, tom, car] call grad_captiveWalking_functions_fnc_doLoadCaptive
  *
  * Public: No
  */

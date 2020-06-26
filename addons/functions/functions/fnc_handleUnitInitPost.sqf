@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: commy2
+ * Author: commy2, Salbei
  * handle captive and unconsciousness state and prevent grenades
  *
  * Arguments:
@@ -10,7 +10,7 @@
  * The return value <BOOL>
  *
  * Example:
- * [bob] call ACE_captives_fnc_handleUnitInitPost
+ * [bob] call grad_captiveWalking_functions_fnc_handleUnitInitPost
  *
  * Public: No
  */

@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: esteldunedain
+ * Author: esteldunedain, Salbei
  * Called when a unit switched locality
  *
  * Arguments:
@@ -11,7 +11,7 @@
  * None
  *
  * Example:
- * [bob, true] call ACE_captives_fnc_handleLocal
+ * [bob, true] call grad_captiveWalking_functions_fnc_handleLocal
  *
  * Public: No
  */

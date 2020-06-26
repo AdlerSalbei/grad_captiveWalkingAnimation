@@ -1,5 +1,20 @@
 #include "script_component.hpp"
-
+/*
+ * Author: Salbei
+ * Free's unit.
+ *
+ * Arguments:
+ * 0: Unit <OBJECT>
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [bob] call grad_captiveWalking_functions_fnc_freeUnit
+ *
+ * Public: No
+ */
+ 
 params ["_unit"];
 
 private _strengthLeft = _unit getVariable [QGVAR(handCuffStrength), 100];
@@ -36,7 +51,7 @@ private _fnc_onFailure = {
     params ["_unit", "_elapsedTime", "_totalTime"];
 
     private _strengthLeft = _unit getVariable [QGVAR(handCuffStrength), 100];
-    _strengthLeft = _strengthLeft - (_strengthleft/_totalTime)*_elapsedTime;
+    _strengthLeft = _strengthLeft - (_strengthLeft/_totalTime)*_elapsedTime;
     _unit setVariable [QGVAR(handCuffStrength), _strengthLeft];
 
     _unit setVariable [QGVAR(fleeing), false];
@@ -51,7 +66,7 @@ private _fnc_condition = {
     true
 };
 
-[((_time/100) * _strengthleft), _unit, _fnc_onFinish, _fnc_onFailure, localize LSTRING(freeing), _fnc_condition] call ace_common_fnc_progressBar;
+[((_time/100) * _strengthLeft), _unit, _fnc_onFinish, _fnc_onFailure, localize LSTRING(freeing), _fnc_condition] call ace_common_fnc_progressBar;
 
 //PFH for effects and sounds
 [{

@@ -11,7 +11,7 @@
  * None
  *
  * Example:
- * [bob, "movearm"] call ACE_captives_fnc_handleAnimChangedHandcuffed
+ * [bob, "movearm"] call grad_captiveWalking_functions_fnc_handleAnimChangedHandcuffed
  *
  * Public: No
  */
@@ -29,47 +29,49 @@ if (_unit == (vehicle _unit)) then {
     }else{
         if (GVAR(allowWalkingWhileCaptiv) && {isPlayer _unit}) then {
             if (
-                !(_newAnimation in [
-                    //Standing Anims
-                    "amovpercmstpsnonwnondnon",
-                    "amovpercmwlksnonwnondf",
-                    "amovpercmwlksnonwnondb",
-                    "amovpercmwlksnonwnondl",
-                    "amovpercmwlksnonwnondr",
-                    "amovpercmwlksnonwnondfl",
-                    "amovpercmwlksnonwnondfr",
-                    "amovpercmwlksnonwnondbr",
-                    "amovpercmwlksnonwnondbl",
-                    "amovpercmstpsnonwnondnon_turnr",
-                    "amovpercmstpsnonwnondnon_turnl",
+                !(_unit getVariable ["ACE_isUnconscious", false]) &&
+                {
+                    !(_newAnimation in [
+                        //Standing Anims
+                        "amovpercmstpsnonwnondnon",
+                        "amovpercmwlksnonwnondf",
+                        "amovpercmwlksnonwnondb",
+                        "amovpercmwlksnonwnondl",
+                        "amovpercmwlksnonwnondr",
+                        "amovpercmwlksnonwnondfl",
+                        "amovpercmwlksnonwnondfr",
+                        "amovpercmwlksnonwnondbr",
+                        "amovpercmwlksnonwnondbl",
+                        "amovpercmstpsnonwnondnon_turnr",
+                        "amovpercmstpsnonwnondnon_turnl",
 
-                    //Kneel Anims
-                    "amovpknlmstpsnonwnondnon",
-                    "amovpknlmwlksnonwnondf",
-                    "amovpknlmwlksnonwnondb",
-                    "amovpknlmwlksnonwnondl",
-                    "amovpknlmwlksnonwnondr",
-                    "amovpknlmwlksnonwnondfr",
-                    "amovpknlmwlksnonwnondfl",
-                    "amovpknlmwlksnonwnondbr",
-                    "amovpknlmwlksnonwnondbl",
-                    "amovpknlmstpsnonwnondnon_turnl",
-                    "amovpknlmstpsnonwnondnon_turnr",
+                        //Kneel Anims
+                        "amovpknlmstpsnonwnondnon",
+                        "amovpknlmwlksnonwnondf",
+                        "amovpknlmwlksnonwnondb",
+                        "amovpknlmwlksnonwnondl",
+                        "amovpknlmwlksnonwnondr",
+                        "amovpknlmwlksnonwnondfr",
+                        "amovpknlmwlksnonwnondfl",
+                        "amovpknlmwlksnonwnondbr",
+                        "amovpknlmwlksnonwnondbl",
+                        "amovpknlmstpsnonwnondnon_turnl",
+                        "amovpknlmstpsnonwnondnon_turnr",
 
-                    //Prone Anims
-                    "amovppnemstpsnonwnondnon",
-                    "amovppnemrunsnonwnondf",
-                    "amovppnemrunsnonwnondb",
-                    "amovppnemrunsnonwnondl",
-                    "amovppnemrunsnonwnondr",
-                    "amovppnemrunsnonwnondfl",
-                    "amovppnemrunsnonwnondfr",
-                    "amovppnemrunsnonwnondbr",
-                    "amovppnemrunsnonwnondbl",
-                    "amovppnemstpsnonwnondnon_turnl",
-                    "amovppnemstpsnonwnondnon_turnr"
-                ]) &&
-                {!(_unit getVariable ["ACE_isUnconscious", false])}
+                        //Prone Anims
+                        "amovppnemstpsnonwnondnon",
+                        "amovppnemrunsnonwnondf",
+                        "amovppnemrunsnonwnondb",
+                        "amovppnemrunsnonwnondl",
+                        "amovppnemrunsnonwnondr",
+                        "amovppnemrunsnonwnondfl",
+                        "amovppnemrunsnonwnondfr",
+                        "amovppnemrunsnonwnondbr",
+                        "amovppnemrunsnonwnondbl",
+                        "amovppnemstpsnonwnondnon_turnl",
+                        "amovppnemstpsnonwnondnon_turnr"
+                    ])
+                }
             ) then {
                 TRACE_1("Handcuff walking animation interrupted",_newAnimation);
                 [_unit, "amovpercmstpsnonwnondnon", 1] call ace_common_fnc_doAnimation;

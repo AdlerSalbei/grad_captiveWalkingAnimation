@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: PabstMirror
+ * Author: PabstMirror, Salbei
  * Checks the conditions for being able to apply handcuffs
  *
  * Arguments:
@@ -11,7 +11,7 @@
  * The return value <BOOL>
  *
  * Example:
- * [player, bob] call ACE_captives_fnc_doApplyHandcuffs;
+ * [player, bob] call grad_captiveWalking_functions_fnc_doApplyHandcuffs;
  *
  * Public: No
  */

@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: commy2 PabstMirror
+ * Author: commy2 PabstMirror, Salbei
  * Fix, because captiveNum doesn't reset properly on respawn
  *
  * Arguments:
@@ -11,7 +11,7 @@
  * None
  *
  * Example:
- * [alive, body] call ACE_captives_fnc_handleRespawn;
+ * [alive, body] call grad_captiveWalking_functions_fnc_handleRespawn;
  *
  * Public: No
  */

@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: commy2
+ * Author: commy2, Salbei
  * Handles when a captive unit gets out of a vehicle.
  *
  * Arguments:
@@ -12,7 +12,7 @@
  * The return value <BOOL>
  *
  * Example:
- * [car2, x, player] call ACE_captives_fnc_handleGetOut
+ * [car2, x, player] call grad_captiveWalking_functions_fnc_handleGetOut
  *
  * Public: No
  */

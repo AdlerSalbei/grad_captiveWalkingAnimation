@@ -1,4 +1,19 @@
 #include "script_component.hpp"
+/*
+ * Author: Salbei
+ * Get's tree object.
+ *
+ * Arguments:
+ * 0: TREE <OBJECT>
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [tree] call grad_captiveWalking_functions_fnc_getObjectPos
+ *
+ * Public: No
+ */
 
 params [["_tree", objNull]];
 
@@ -16,7 +31,7 @@ if (isNil QGVAR(trunkOffsetsCache)) then {
 };
 private _modelName = ((str _tree) splitString " .") select 1;
 private _offset = GVAR(trunkOffsetsCache) getVariable [_modelName, []];
-if (count _offset > 0) exitWith {
+if (_offset isEqualTo []) exitWith {
     private _dirCCW = -(getDir _tree);
     _offset params ["_x", "_y"];
     private  _trunkPos = (getPosASL _tree) vectorAdd [_x * cos _dirCCW - _y * sin _dirCCW, _x * sin _dirCCW + _y * cos _dirCCW, 0];
