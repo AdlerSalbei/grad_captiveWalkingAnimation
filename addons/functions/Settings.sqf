@@ -61,10 +61,10 @@ GVAR(captivityEnabled) = false;
 */
 [
     QGVAR(freeingTime), 
-    "SLIDER", 
+    "TIME", 
     localize LSTRING(freeingTime), 
     localize LSTRING(settingCategory), 
-    [5, 450, 35, 0], 
+    [5, 450, 35], 
     true
 ] call CBA_Settings_fnc_init;
 /*
