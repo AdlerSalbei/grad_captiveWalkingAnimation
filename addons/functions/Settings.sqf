@@ -9,7 +9,7 @@ GVAR(captivityEnabled) = false;
     localize LSTRING(settingCategory), 
     true,
     true
-] call CBA_Settings_fnc_init;
+] call CBA_fnc_addSetting;
 
 [
     QGVAR(disableEscorting), 
@@ -21,7 +21,7 @@ GVAR(captivityEnabled) = false;
     localize LSTRING(settingCategory), 
     false,
     true
-] call CBA_Settings_fnc_init;
+] call CBA_fnc_addSetting;
 
 [
     QGVAR(allowRunning), 
@@ -33,7 +33,7 @@ GVAR(captivityEnabled) = false;
     localize LSTRING(settingCategory), 
     false,
     true
-] call CBA_Settings_fnc_init;
+] call CBA_fnc_addSetting;
 
 [
     QGVAR(allowFreeing), 
@@ -45,7 +45,7 @@ GVAR(captivityEnabled) = false;
     localize LSTRING(settingCategory), 
     true,
     true
-] call CBA_Settings_fnc_init;
+] call CBA_fnc_addSetting;
 /*
 [
     QGVAR(allowFreeingInVehicle), 
@@ -57,7 +57,7 @@ GVAR(captivityEnabled) = false;
     localize LSTRING(settingCategory), 
     true,
     true
-] call CBA_Settings_fnc_init;
+] call CBA_fnc_addSetting;
 */
 [
     QGVAR(freeingTime), 
@@ -66,7 +66,7 @@ GVAR(captivityEnabled) = false;
     localize LSTRING(settingCategory), 
     [5, 450, 35], 
     true
-] call CBA_Settings_fnc_init;
+] call CBA_fnc_addSetting;
 /*
 [
     QGVAR(freeingTimeInVehicle), 
@@ -75,5 +75,5 @@ GVAR(captivityEnabled) = false;
     localize LSTRING(settingCategory), 
     [5, 1500, 120, 0], 
     true
-] call CBA_Settings_fnc_init;
+] call CBA_fnc_addSetting;
 */
