@@ -20,6 +20,7 @@ PREP(handleOnUnconscious);
 PREP(handleRespawn);
 PREP(handleUnitInitPost);
 PREP(interactionEH);
+PREP(moduleCaptive);
 PREP(moduleHandcuffed);
 PREP(setHandcuffed);
 PREP(vehicleCaptiveMoveOut);

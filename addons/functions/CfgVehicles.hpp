@@ -85,6 +85,11 @@ class CfgVehicles {
         function = QFUNC(moduleHandcuffed);
     };
 
+    class ace_zeus_moduleBase;
+    class ace_zeus_moduleCaptive: ace_zeus_moduleBase {
+        function = QFUNC(moduleCaptive);
+    };
+
     class Land_HelipadEmpty_F;
     class ACE_LogicDummy: Land_HelipadEmpty_F {
         class ACE_Actions {

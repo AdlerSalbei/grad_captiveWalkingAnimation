@@ -61,5 +61,53 @@
             <English>Allows the player to run while captive</English>
             <German>Erlaubt es dase der Spieler rennt, während er gefangen ist</German>
         </Key>
+        <Key ID="STR_grad_captiveWalking_functions_NothingSelected">
+            <English>Place on a unit</English>
+            <French>Placez sur une unité</French>
+            <German>Es wurde nichts ausgewählt</German>
+            <Spanish>Nada bajo el ratón</Spanish>
+            <Portuguese>Coloque em uma unidade</Portuguese>
+            <Czech>Umístni na jednotku</Czech>
+            <Polish>Nie ma nic pod kursorem</Polish>
+            <Russian>Ничего не выделено</Russian>
+            <Hungarian>Semmi sincs az egér alatt</Hungarian>
+            <Italian>Piazza su una unità</Italian>
+            <Japanese>ユニットの上に設置</Japanese>
+            <Korean>대상에 배치하기</Korean>
+            <Chinesesimp>放置在一个单位上</Chinesesimp>
+            <Chinese>放置在一個單位上</Chinese>
+        </Key>
+        <Key ID="STR_grad_captiveWalking_functions_OnlyInfantry">
+            <English>Unit must be infantry</English>
+            <French>Utiliser uniquement sur du personnel à pied</French>
+            <German>Nur bei abgesessener Infanterie verwendbar</German>
+            <Spanish>Utilizar solo en infanteria desmontada</Spanish>
+            <Czech>Použitelné jen na pěsích jednotkách</Czech>
+            <Polish>Używaj tylko na piechocie poza wszelkimi pojazdami</Polish>
+            <Russian>Применимо только к пехоте вне техники</Russian>
+            <Hungarian>Csak járműben kívül lévő egységeken használni</Hungarian>
+            <Italian>Si può usare solo su fanteria a piedi</Italian>
+            <Portuguese>Usar somente em infantaria desmontada</Portuguese>
+            <Japanese>ユニットを歩兵にさせます</Japanese>
+            <Korean>대상이 반드시 보병이어야 합니다</Korean>
+            <Chinesesimp>单位必须是步兵</Chinesesimp>
+            <Chinese>單位必須是步兵</Chinese>
+        </Key>
+        <Key ID="STR_grad_captiveWalking_functions_OnlyAlive">
+            <English>Unit must be alive</English>
+            <French>Utiliser uniquement sur une unité vivante</French>
+            <German>Einheit muss lebendig sein.</German>
+            <Spanish>Utilizar solo en unidades vivas</Spanish>
+            <Czech>Použitelné jen na živé jednotky</Czech>
+            <Polish>Używaj tylko na żywych jednostkach</Polish>
+            <Russian>Применимо только к живым юнитам</Russian>
+            <Hungarian>Csak élő egységeken használni</Hungarian>
+            <Italian>Si può fare solo su persone vive</Italian>
+            <Portuguese>Usar somente em unidades vivas</Portuguese>
+            <Japanese>ユニットを生存させます</Japanese>
+            <Korean>대상이 반드시 살아있어야 합니다</Korean>
+            <Chinesesimp>单位必须是活着</Chinesesimp>
+            <Chinese>單位必須是活著</Chinese>
+        </Key>
     </Package>
 </Project>
