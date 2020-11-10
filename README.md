@@ -5,6 +5,7 @@
 </p>
 
 Gruppe Adler Captive Walking (short: GRAD Captive Walking) adds a walking animation to the ACE captive state.
+The animations only work on Players, becouse AI reacts weirdly.
 
 Features:
 - Animation for ACE Captive state
