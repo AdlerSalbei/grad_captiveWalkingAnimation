@@ -11,6 +11,10 @@ Features:
 - Animation for ACE Captive state
 - Breaking ties by rubbing them on trees
 
+Dependencies:
+- CBA
+- ACE
+
 This project is also hosted on GitHub: https://github.com/gruppe-adler/grad_captiveWalking
 Feel free to report issues and submit pull requests there.
 There will be no non ACE version.
